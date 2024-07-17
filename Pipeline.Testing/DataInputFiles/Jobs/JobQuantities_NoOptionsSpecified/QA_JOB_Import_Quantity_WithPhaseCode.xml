@@ -1,0 +1,25 @@
+<jobstart xmlns="urn:Pipeline-JobStart.xsd" version="1.0.2" source="BIM">
+	<jobcode>RT-QA_JOB_Import_Quantity</jobcode>
+	<housecode>400</housecode>
+	<housename>QA_RT_House04_Automation</housename>
+	<communitycode/>
+	<communityname/>
+	<lotcode/>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="Option_QA_RT_Automation" description=""/>
+	</options>
+	<customitems>
+		<products>
+			<product name="QA_Product_03_Automation">
+				<product_code></product_code>
+				<product_description>QA_Product_03_Automation Description</product_description>
+				<product_qnt>270</product_qnt>
+				<product_use/>
+				<product_unit></product_unit>
+				<phase_code>QA_3</phase_code>
+				<group_code/>
+			</product>
+		</products>
+	</customitems>
+</jobstart>

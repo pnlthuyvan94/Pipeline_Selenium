@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode></housecode>
+	<housename>QA_RT_House_47899_Automation</housename>
+	<communitycode>Automation_01</communitycode>
+	<communityname>QA_RT_Community01_Automation</communityname>
+	<series>"QA_RT_Serie3_Automation"</series>
+	<option code="QA_RT_Option01_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_47899_03">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>3.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_47899_01">QA_RT_New_Style_47899_01</style>
+				<phase_code>Au01</phase_code>
+			</product>
+			<product name="QA_RT_New_Product_47899_04">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>4.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_47899_02">QA_RT_New_Style_47899_02</style>
+				<phase_code>Au02</phase_code>
+			</product>
+		</products>
+	</option>
+</plusminus>	

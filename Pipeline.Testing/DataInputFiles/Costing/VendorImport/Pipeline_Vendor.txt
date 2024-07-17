@@ -1,0 +1,2 @@
+Vendor Id,Name,Code,Trade,Contact,Email,Address 1,Address 2,Address 3,City,State,Zip,Phone,Phone 2,Mobile,URL,Fax
+"0","RT_QA_New_Vendor_D01B","D01B","","Contact","D01B@email.com","Address 1","Address 2","Address 3","City","State","Zip","Phone","Phone 2","Mobile","URL","Fax"

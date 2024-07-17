@@ -1,0 +1,7 @@
+Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","100010","BBA","ELEVATION 1A","","True","False","","","",""
+"M","100011","BBB","ELEVATION 2B","","True","False","","","",""
+"M","10001","ELEV-A","Elevation A","Elevation A","True","False","Elevations","","Structural","Elevations"
+"M","10002","ELEV-B","Elevation B","Elevation B","True","False","Elevations","","Structural","Elevations"
+"M","0101","0101","description","sale description","True","False","","","",""
+"M","01234","0124Name","Description","","True","False","","","",""

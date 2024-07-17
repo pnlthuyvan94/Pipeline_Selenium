@@ -1,0 +1,17 @@
+.vs/
+/lib/
+packages/
+*.csproj.user
+*.sln.DotSettings
+*.suo
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+SetupSource/StrongTieSetups/Setup_AnchorDesignerCAP_Full.exe

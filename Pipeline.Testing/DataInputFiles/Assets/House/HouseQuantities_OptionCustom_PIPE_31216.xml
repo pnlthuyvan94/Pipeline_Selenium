@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>300</housecode>
+	<housename>QA_RT_House03_Automation</housename>
+	<communitycode>Automation_01</communitycode>
+	<communityname>QA_RT_Community01_Automation</communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="QA_RT_Option_Custom_Parameter_Automation" description="Please do not remove or modify" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_02">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>14.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="BASE" description="Base House" condition="">
+		<products>
+			<product name="QA_RT_Product_Custom_Parameter_Parent">
+				<product_code>QAA2</product_code>
+				<product_description></product_description>
+				<product_qnt>11.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit>BF</product_unit>
+				<product_waste>1.10</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au02</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+</plusminus>

@@ -1,0 +1,4 @@
+﻿Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","0100","QA_RT_Option01_Automation","","","False","False","","","",""
+"M","0200","QA_RT_Option02_Automation","","","False","False","","","",""
+"M","0300","QA_RT_Option03_Automation","","","False","False","","","",""

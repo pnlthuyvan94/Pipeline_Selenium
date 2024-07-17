@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus xmlns="urn:Pipeline-PlusMinus.xsd" version="1.0.2" source="Pipeline">
+	<housecode>0918</housecode>
+	<housename>RT_QA_Automation_House_36148</housename>
+	<communitycode>ComAu5</communitycode>
+	<communityname>RT_QA_Automation_Community_36148</communityname>
+	<series>RT_QA_Automation_SeriesData_36148</series>
+	<option code="RT_QA_Automation_Option_36148" description="FOR 190" condition="">
+		<products>
+			<product name="RT_QA_Automation_Production_36148">
+				<product_code>1911</product_code>
+				<product_description/>
+				<product_qnt>22.0000</product_qnt>
+				<product_use/>
+				<product_unit/>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="RT_QA_Manufacturer_36148">RT_QA_Style_36148</style>
+				<phase_code>1901</phase_code>
+				<group_code>SPA_190</group_code>				
+			</product>
+			<product name="RT_QA_Automation_Production_36148_D">
+				<product_code>1919</product_code>
+				<product_description/>
+				<product_qnt>33.0000</product_qnt>
+				<product_use/>
+				<product_unit/>
+				<product_waste>0.00</product_waste>
+				<style manufacturer=""></style>				
+				<phase_code>1902</phase_code>
+				<group_code>SPA_190</group_code>				
+			</product>
+		</products>
+	</option>
+</plusminus>

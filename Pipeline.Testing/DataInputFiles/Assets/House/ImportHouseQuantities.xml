@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>300</housecode>
+	<housename>QA_RT_House03_Automation</housename>
+	<communitycode>Automation_01</communitycode>
+	<communityname>QA_RT_Community01_Automation</communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="QA_RT_Option01_Automation" description="Please do not remove or modify" condition="">
+		<products>
+			<product name="RT_QA_New_Product_Auto_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="RT_QA_New_Manu_Auto">RT_QA_New_Style_Auto</style>
+				<phase_code>Au_1</phase_code>
+				<group_code>RT_QA_New_Building_Group_Auto_01</group_code>
+				<parameters>
+					<parameter id="SWG" value="L" />
+				</parameters>
+			</product>
+			<product name="RT_QA_New_Product_Auto_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>20.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="RT_QA_New_Manu_Auto">RT_QA_New_Style_Auto</style>
+				<phase_code>Au_1</phase_code>
+				<group_code>RT_QA_New_Building_Group_Auto_01</group_code>
+				<parameters>
+					<parameter id="SWG" value="R" />
+				</parameters>
+			</product>
+			<product name="RT_QA_New_Product_Auto_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>30.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="RT_QA_New_Manu_Auto">RT_QA_New_Style_Auto</style>
+				<phase_code>Au_1</phase_code>
+				<group_code>RT_QA_New_Building_Group_Auto_01</group_code>
+				<parameters>
+					<parameter id="SWG" value="Y" />
+				</parameters>
+			</product>
+		</products>
+	</option>
+</plusminus>

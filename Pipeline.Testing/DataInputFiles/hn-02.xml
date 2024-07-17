@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jobstart version="1.0.2" source="Pipeline" xmlns="urn:Pipeline-JobStart.xsd">
+  <jobcode>hn-02</jobcode>
+  <housecode>0011</housecode>
+  <housename>hai nguyen house</housename>
+  <communitycode>HN</communitycode>
+  <communityname>hai nguyen community</communityname>
+  <lotcode>1601</lotcode>
+  <estimatetype>0</estimatetype>
+  <options>
+    <option code="Option_4" description="Hai Nguyen Option 4" />
+  </options>
+  <customitems>
+    <products>
+      <product name="HN-Pro-01">
+        <product_code>_001</product_code>
+        <product_description>Created a product</product_description>
+        <product_qnt>5.0000</product_qnt>
+        <product_use></product_use>
+        <product_unit></product_unit>
+        <product_waste />
+        <phase_code>_001</phase_code>
+        <group_code />
+      </product>
+      <product name="HN-Pro-02">
+        <product_code></product_code>
+        <product_description>Product 2</product_description>
+        <product_qnt>6.0000</product_qnt>
+        <product_use></product_use>
+        <product_unit></product_unit>
+        <product_waste />
+        <phase_code>_002</phase_code>
+        <group_code />
+      </product>
+      <product name="HN-Pro-03">
+        <product_code></product_code>
+        <product_description>Product 3</product_description>
+        <product_qnt>7.0000</product_qnt>
+        <product_use></product_use>
+        <product_unit></product_unit>
+        <product_waste />
+        <phase_code>_003</phase_code>
+        <group_code />
+      </product>
+    </products>
+  </customitems>
+</jobstart>

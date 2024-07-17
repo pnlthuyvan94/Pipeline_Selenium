@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jobstart version="1.0.2" source="Pipeline" xmlns="urn:Pipeline-JobStart.xsd">
+	<jobcode>RT-QA_JOB_Import_Quantity</jobcode>
+	<housecode>400</housecode>
+	<housename>QA_RT_House04_Automation</housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<lotcode>1</lotcode>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="Option_QA_RT2" description="" />
+	</options>
+	<customitems>
+		<products>
+			<product name="QA_Product_01_Automation">
+				<product_code></product_code>
+				<product_sourceid>666789752689;9753472;977876666    </product_sourceid>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste />
+				<phase_code></phase_code>
+				<group_code />
+			</product>
+		</products>
+	</customitems>
+</jobstart>

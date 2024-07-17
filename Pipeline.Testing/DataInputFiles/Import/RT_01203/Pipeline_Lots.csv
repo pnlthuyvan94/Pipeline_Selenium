@@ -1,0 +1,2 @@
+CommunityName,CommunityCode,LotNumber,Status,CommunityPhase,Acre,Cost,Premium,Markup,Width,Depth,Address,City,State,Zip,Latitude,Longitude
+QA_RT_Community_Auto_Assign_House_Lot_To_Phase,QA_RT_Community_Auto_Assign_House_Lot_To_Phase_Code,QA_RT_Lot_1,,None,0,0.00,0.00,0.00,0,0,,,,,40.386254,-86.831796

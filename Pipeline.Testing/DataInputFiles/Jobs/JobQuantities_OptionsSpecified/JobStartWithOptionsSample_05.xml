@@ -1,0 +1,61 @@
+﻿<jobstartwithoptions xmlns="urn:Pipeline-JobStartWithOptions.xsd" version="1.0.2" source="Playbook">
+	<jobcode>Job_RTTT</jobcode>
+	<housecode></housecode>
+	<housename></housename>
+	<communitycode>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa7777777777777777799999999999999999999999999qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq99</communitycode>
+	<communityname></communityname>
+	<lotcode/>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="KN_OPTION02" description="">
+			<products>
+				<product name="YTREWQ">
+					<product_code>5013</product_code>
+					<product_sourceid>666789752689;9753472;977878;6666    </product_sourceid>
+					<product_description></product_description>
+					<product_qnt>444</product_qnt>
+					<product_use/>
+					<product_unit></product_unit>
+					<product_waste/>
+					<phase_code>1200</phase_code>
+					<group_code/>
+				</product>
+				<product name="YTREWQ">
+					<product_code>5013</product_code>
+					<product_description></product_description>
+					<product_qnt>444</product_qnt>
+					<product_use/>
+					<product_unit></product_unit>
+					<product_waste/>
+					<phase_code></phase_code>
+					<group_code/>
+				</product>
+			</products>
+		</option>
+		<option code="KN_OPTION01" description="">
+			<products>
+				<product name="YTREWQ">
+					<product_code>5013</product_code>
+					<product_sourceid>666789752689;9753472;977878;6666    </product_sourceid>
+					<product_description></product_description>
+					<product_qnt>444</product_qnt>
+					<product_use/>
+					<product_unit>EA</product_unit>
+					<product_waste/>
+					<phase_code>1200</phase_code>
+					<group_code/>
+				</product>
+				<product name="YTREWQ">
+					<product_code>5013</product_code>
+					<product_description></product_description>
+					<product_qnt>444</product_qnt>
+					<product_use/>
+					<product_unit>EA</product_unit>
+					<product_waste/>
+					<phase_code></phase_code>
+					<group_code/>
+				</product>
+			</products>
+		</option>
+	</options>
+</jobstartwithoptions>

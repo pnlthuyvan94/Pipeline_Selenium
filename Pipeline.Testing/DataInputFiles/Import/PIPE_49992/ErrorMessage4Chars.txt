@@ -1,0 +1,1 @@
+﻿'Import Completed, however the following adjustments could not be made:          Line 4: The Building Phase code cannot be greater than 4 characters'

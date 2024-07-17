@@ -1,0 +1,6 @@
+﻿Option Number,Option Name,Option Description,Building Phase Code,Product Name,Product Code,Product Description,Quantity,Use,Dependent Condition,Unit,Source,Style Name
+"0001","QA_RT_Option_Automation","Please do not remove or modify","120","QA_RT_New_Product01_Automation","","-----","1.0000","-----","","","Pipeline","Default"
+"0001","QA_RT_Option_Automation","Please do not remove or modify","120","QA_RT_New_Product01_Automation","","-----","1.2000","-----","","","Pipeline","QA_RT_Style_Automation"
+"0001","QA_RT_Option_Automation","Please do not remove or modify","120","QA_RT_New_Product02_Automation","","-----","2.2000","-----","","","Pipeline","QA_RT_Style_Automation"
+"0001","QA_RT_Option_Automation","Please do not remove or modify","120","QA_RT_New_Product02_Automation","","-----","2.0000","-----","","","Pipeline","DEFAULT"
+"0001","QA_RT_Option_Automation","Please do not remove or modify","120","QA_RT_New_Product03_Automation","","-----","3.0000","-----","","","Pipeline","DEFAULT"

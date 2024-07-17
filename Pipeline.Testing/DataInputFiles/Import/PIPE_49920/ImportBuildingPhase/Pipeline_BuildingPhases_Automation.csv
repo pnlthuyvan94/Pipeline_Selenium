@@ -1,0 +1,3 @@
+﻿Building Group Code,Building Group Name,Building Group Description,Building Phase Code,Building Phase Name,Building Phase  Abbreviated Name,Building Phase Description,Building Phase Type,Building Phase Parent,Tax Status
+"12111111","QA_RT_New_Building_Group_Auto_01","Automation testing","9920","QA_RT_Parent_BuildingPhase_Automation","","",,"","Non-tax"
+"12111111","QA_RT_New_Building_Group_Auto_01","Automation testing","9921","QA_RT_Child_BuildingPhase_Automation","","",,"9920 - QA_RT_Parent_BuildingPhase_Automation","Non-tax"

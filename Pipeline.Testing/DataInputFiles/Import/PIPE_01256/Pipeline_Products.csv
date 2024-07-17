@@ -1,0 +1,3 @@
+﻿Building Phase Code,Product Name,Category Name,Description,SKU,Notes,Manufacturer,Style,Code,Unit,Waste,Rounding Unit,Rounding Direction,Default Building Phase,Tax Status,Supplemental to Bid,Projected Cost,Reverse Product
+"RT01","QA_RT_ProductUnit01_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","Ab_Auto","0.00","","STANDARD","default","Phase","False","0.00",""
+"RT01","QA_RT_ProductUnit02_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","Ab_Auto","0.00","","STANDARD","","Phase","False","0.00",""

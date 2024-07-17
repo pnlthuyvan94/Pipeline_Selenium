@@ -1,0 +1,5 @@
+Plan Name,Plan Number,Series,Base Price,Basement SQF,First SQF,Second SQF,Heated SQF,Total SQF,Style,Stories,Bedrooms,Bathrooms,Garage,Description,Sales House Name
+"QA_RT_HouseBid02_Automation","Bid2","QA_RT_Serie3_Automation","300000.00","0","0","0","0","0","Single Family","1","3","3","3 Car","QA_RT_HouseBid02_Automation","QA_RT_HouseBid02_Automation"
+"QA_RT_HouseBid03_Automation","Bid3","QA_RT_Serie3_Automation","300000.00","0","0","0","0","0","Single Family","1","3","3","3 Car","QA_RT_HouseBid02_Automation","QA_RT_HouseBid03_Automation"
+"QA_RT_HouseBid04_Automation","Bid4","QA_RT_Serie3_Automation","300000.00","0","0","0","0","0","Single Family","1","3","3","3 Car","QA_RT_HouseBid02_Automation","QA_RT_HouseBid04_Automation"
+"QA_RT_HouseBid05_Automation","Bid5","QA_RT_Serie3_Automation","300000.00","0","0","0","0","0","Single Family","1","3","3","3 Car","QA_RT_HouseBid02_Automation","QA_RT_HouseBid05_Automation"

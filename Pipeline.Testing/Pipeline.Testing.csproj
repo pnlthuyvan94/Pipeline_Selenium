@@ -1,0 +1,2774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.4.1.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.4.1.0\build\NUnit.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F4C871D-E654-4400-8685-1FD83CD9DEC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pipeline.Testing</RootNamespace>
+    <AssemblyName>Pipeline.Testing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtentReports, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.4.0.3\lib\ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.7.2\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.7.2\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.7.2\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=4.0.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.4.1.0\lib\net462\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework.legacy, Version=4.0.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.4.1.0\lib\net462\nunit.framework.legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.10.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.1.0\lib\net451\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.8.1\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.1.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Based\TestSets.cs" />
+    <Compile Include="Based\TestStep.cs" />
+    <Compile Include="Based\TestStepManager.cs" />
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_DefaultCom_PIPE_36148.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_SpecificCom_PIPE_36138.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_DefaultCom_PIPE_36132.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_OptionCustom.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_SpecificCom_PIPE_36132.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_SpecificCom_PIPE_36148.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_35652.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_44420_IV_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_44420_IV_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_47899_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_47899_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_49912.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_34678.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_36127.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_39505_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_39505_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_39505_3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44395_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44395_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44395_3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44395_4.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_I.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV_3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV_4.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_IV_5.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_I_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_I_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_V.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_V_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_44420_V_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_49920.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_50514.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_Pre_ImportFile_PIPE_35652.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_Pre_ImportFile_PIPE_47899.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_Pre_ImportFile_PIPE_47899_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_Pre_ImportFile_PIPE_49912.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity2_PIPE_36127.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_18660.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_35568.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_34161.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_As_built_ImportFile_PIPE_44420_IV.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_44420_III.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_44420_III_1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_44420_IV.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_44420_IV_1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_44420_IV_2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_49912.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToCommunityOverridesImport\Pipeline_VendorToCommunityOverrides.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToCommunityOverridesImport\Pipeline_VendorToCommunityOverrides_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToCommunityOverridesImport\Pipeline_VendorToCommunityOverrides_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToCommunityOverridesImport\Pipeline_VendorToCommunityOverrides_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToBuildingPhaseImport\Pipeline_VendorToBuildingPhase.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToBuildingPhaseImport\Pipeline_VendorToBuildingPhase_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToBuildingPhaseImport\Pipeline_VendorToBuildingPhase_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorToBuildingPhaseImport\Pipeline_VendorToBuildingPhase_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorImport\Pipeline_Vendor.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorImport\Pipeline_Vendor_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorImport\Pipeline_Vendor_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\VendorImport\Pipeline_Vendor_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19175\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19180\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19180\Import_Product_To_Worksheet.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIa.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIb.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIc.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IId.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIe.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIf.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIg.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIh.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIi.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIk.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIl.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIm.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIn.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19516\Pipeline_Products_IIx.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_22393\Pipeline_BuildingPhasesErrorFile_Automation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_III_1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_III_2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_10.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_11.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_12.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_3.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_4.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_5.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_6.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_7.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_8.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_24071\Pipeline_Options_II_9.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30286\Pipeline_QA_RT_SpecSetGroup_Automation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_45580\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_47899\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_47899\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_48407\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_48407\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_48407\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49901\ImportInvalidProductData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49901\ImportValidProductData.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49910\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49910\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49911\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49911\Pipeline_OptionProductErrorFile_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49911\Pipeline_OptionProduct_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49911\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49912\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49912\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49912\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49920\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49920\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49920\ImportOption\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49920\ImportProduct\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49898\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49898\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49992\Pipeline_BuildingPhases_4_Chars.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_49992\Pipeline_BuildingPhases_6_Chars.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_50514\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_50514\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_50514\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPI_22395\Pipeline_BOMBuildingPhaseRulesErrorFile_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPI_22395\Pipeline_BOMBuildingPhaseRules_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Integrations\ApiConnection.cs" />
+    <Compile Include="Pages\Assets\Communities\AssignLotOrPhaseOrHouseToEachOther\AssignLotOrPhaseOrHouseToEachOtherModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\AssignLotOrPhaseOrHouseToEachOther\AssignLotOrPhaseOrHouseToEachOtherModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\AssignLotOrPhaseOrHouseToEachOther\AssignLotOrPhaseOrHouseToEachOtherModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AddHouseToCommunity\AddHouseToCommunityModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AddHouseToCommunity\AddHouseToCommunityModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AddHouseToCommunity\AddHouseToCommunityModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AvailablePlanPage.Action.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AvailablePlanPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AvailablePlanPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\AvailablePlan\AvaiablePlanData.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityVendor\AddVendor\CommunityVendorModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityVendor\AddVendor\CommunityVendorModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityVendor\AddVendor\CommunityVendorModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityVendor\CommunityVendorPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityVendor\CommunityVendorPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityHouseBOM\CommunityHouseBOMDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityHouseBOM\CommunityHouseBOMDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Location\CommunityLocationPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Location\CommunityLocationPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Location\CommunityLocationPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\AddLot\AddLotModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\AddLot\AddLotModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\AddLot\AddLotModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\LotData.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\LotPage.Action.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\LotPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Lot\LotPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyHomesPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyHomesPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyHomesData.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyHomesPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyResource\MoveInReadyResourceGrid.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyResource\MoveInReadyResourceGrid.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\MoveInReadyHomes\MoveInReadyResource\MoveInReadyResourceGrid.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityHouseOption\AddCommunityHouseOptionModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityHouseOption\AddCommunityHouseOptionModal.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityHouseOption\AddCommunityHouseOptionModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityOption\AddCommunityOptionModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityOption\AddCommunityOptionModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddCommunityOption\AddCommunityOptionModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddOptionCondition\AddOptionConditionGrid.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddOptionCondition\AddOptionConditionGrid.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\AddOptionCondition\AddOptionConditionGrid.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\CommunityHouseOptionData.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\CommunityOptionData.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\CommunityOptionPage.Action.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\CommunityOptionPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Options\CommunityOptionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\AddPhase\AddCommunityPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\AddPhase\AddCommunityPhaseModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\AddPhase\AddCommunityPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\CommunityPhaseData.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\CommunityPhasePage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\CommunityPhasePage.Action.cs" />
+    <Compile Include="Pages\Assets\Communities\Phase\CommunityPhasePage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\PointsOfInterest\CommunityPoIPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\PointsOfInterest\CommunityPoIPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\PointsOfInterest\CommunityPoIPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\PointsOfInterest\PoIData.cs" />
+    <Compile Include="Pages\Assets\Communities\Products\CommunityProductsPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Products\CommunityProductsPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Products\CommunityProductsPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Products\CommunityQuantitiesData.cs" />
+    <Compile Include="Pages\Assets\Communities\Sitemap\SitemapPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Sitemap\SitemapPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Sitemap\SitemapPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\Spec Sets\CommunitySpecSetsPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\Spec Sets\CommunitySpecSetsPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\Spec Sets\CommunitySpecSetsPage.Elements.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionData.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionDetail\CustomOptionDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionDetail\CustomOptionDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionDetail\CustomOptionDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityData.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityDetail\CommunityDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityDetail\CommunityDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityDetail\CommunityDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Communities\CommunityPage.Elements.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionProduct\CustomOptionProduct.Actions.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionProduct\CustomOptionProduct.Asserters.cs" />
+    <Compile Include="Pages\Assets\CustomOptions\CustomOptionProduct\CustomOptionProduct.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\AddCommunity\DivisionCommunityModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\AddCommunity\DivisionCommunityModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\AddCommunity\DivisionCommunityModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\DivisionCommunityPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\DivisionCommunityPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionCommunity\DivisionCommunityPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\Location\LocationPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\Location\LocationPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\Location\LocationPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionVendors\AddVendor\DivisionVendorModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionVendors\AddVendor\DivisionVendorModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionVendors\AddVendor\DivisionVendorModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionVendors\DivisionVendorPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionVendors\DivisionVendorPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Bid Costs\BidCostsToHousePage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Bid Costs\BidCostsToHousePage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Communities\HouseCommunities.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Communities\HouseCommunities.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\Communities\HouseCommunities.Elements.cs" />
+    <Compile Include="Pages\Assets\House\FloorPlans\HouseFloorPlanDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\FloorPlans\HouseFloorPlanDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\FloorPlans\FloorPlanLevel.cs" />
+    <Compile Include="Pages\Assets\House\HouseBOM\BOMTracing\BOMTracingPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseBOM\BOMTracing\BOMTracingPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\HouseBOM\BOMTracing\BOMTracingPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HouseBOM\HouseBOMDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseBOM\HouseBOMDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HouseComparisonGroups\HouseComparisonGroups.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseComparisonGroups\HouseComparisonGroups.Aserters.cs" />
+    <Compile Include="Pages\Assets\House\HouseComparisonGroups\HouseComparisonGroups.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HouseEstimate\HouseEstimateDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseEstimate\HouseEstiamteDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HouseImport\HouseImportDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseImport\HouseImportDetailPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\House\HouseImport\HouseImportDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HouseQuantitiesData.cs" />
+    <Compile Include="Pages\Assets\House\HouseSpecSet\HouseSpecSetPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseSpecSet\HouseSpecSetPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\HouseSpecSet\HouseSpecSetPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Import\HouseImportQuantitiesData.cs" />
+    <Compile Include="Pages\Assets\House\Import\HouseImportQuantitiesPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Import\HouseImportQuantitiesPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\ProductToOptionData.cs" />
+    <Compile Include="Pages\Assets\House\HouseData.cs" />
+    <Compile Include="Pages\Assets\House\Options\HouseOptionDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Options\HouseOptionDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\Options\HouseOptionDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseOptionCopyQuantities\HouseOptionCopyQuantities.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseOptionCopyQuantities\HouseOptionCopyQuantities.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseQuantitiesDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseQuantitiesDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseQuantitiesDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\HouseQuantityUsesData.cs" />
+    <Compile Include="Pages\Assets\House\Quantities\QuantitiesDetailData.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\AddOptionsToOptionRoom\AddOptionToRoomModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\AddOptionsToOptionRoom\AddOptionToRoomModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\AddOptionsToOptionRoom\AddOptionToRoomModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\OptionRoomDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\OptionRoomDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoonDetail\OptionRoomDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupData.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\AddOptionSelectionToGroup\AddOptionSelectionToGroupModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\AddOptionSelectionToGroup\AddOptionSelectionToGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\AddOptionSelectionToGroup\AddOptionSelectionToGroupModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\OptionSelectionGroupDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\OptionSelectionGroupDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupDetail\OptionSelectionGroupDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\SelectionDetail\SelectionDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\SelectionDetail\SelectionDetailPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\SelectionDetail\SelectionDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\Assigments\AssigmentView.cs" />
+    <Compile Include="Pages\Assets\Options\Assigments\AssignmentDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\Assigments\AssignmentDetailPage.Asserter.cs" />
+    <Compile Include="Pages\Assets\Options\Assigments\AssignmentDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\Bid Costs\BidCostsToOptionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\Bid Costs\BidCostsToOptionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\Bid Costs\OptionBuildingPhaseData.cs" />
+    <Compile Include="Pages\Assets\Options\OptionImport\OptionImportPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\OptionImport\OptionImportPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Options\OptionImport\OptionImportPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\Products\GlobalOptionBomQuantitesData.cs" />
+    <Compile Include="Pages\Assets\Options\Products\OptionQuantitiesData.cs" />
+    <Compile Include="Pages\Assets\Options\Products\ProductsToOptionPage.Asserter.cs" />
+    <Compile Include="Pages\Assets\Options\Products\ProductsToOptionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\Products\ProductsToOptionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionType\AddOptionType\AddOptionTypeModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionType\AddOptionType\AddOptionTypeModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionType\AddOptionType\AddOptionTypeModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeData.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\AddOptionToOptionType\AddOptionToOptionTypeModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\AddOptionToOptionType\AddOptionToOptionTypeModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\AddOptionToOptionType\AddOptionToOptionTypeModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\OptionTypeDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\OptionTypeDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypeDetail\OptionTypeDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypePage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypePage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionType\OptionTypePage.Elements.cs" />
+    <Compile Include="Pages\Costing\CommunitySalesTax\CommunitySalesTaxData.cs" />
+    <Compile Include="Pages\Costing\CostingEstimate\CostingEstimatesPage.Actions.cs" />
+    <Compile Include="Pages\Costing\CostingEstimate\CostingEstimatesPage.Elements.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddJobOptionBidCost\AddJobOptionBidCostModal.Actions.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddJobOptionBidCost\AddJobOptionBidCostModal.Asserters.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddJobOptionBidCost\AddJobOptionBidCostModal.Elements.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddOptionBidCost\AddOptionBidCostModal.Actions.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddOptionBidCost\AddOptionBidCostModal.Asserters.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\AddOptionBidCost\AddOptionBidCostModal.Elements.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\HistoricCosting\HistoricCostingPage.Actions.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\HistoricCosting\HistoricCostingPage.Asserters.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\HistoricCosting\HistoricCostingPage.Elements.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\OptionBidCostData.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\OptionBidCostPage.Actions.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\OptionBidCostPage.Asserters.cs" />
+    <Compile Include="Pages\Costing\OptionBidCost\OptionBidCostPage.Elements.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\TaxGroupData.cs" />
+    <Compile Include="Pages\Costing\Vendor\BaseCosts\AddBaseCost\AddBaseCostModal.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\BaseCosts\AddBaseCost\AddBaseCostModal.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\BaseCosts\AddBaseCost\AddBaseCostModal.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\BaseCosts\BaseCostPage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\BaseCosts\BaseCostPage.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\Import\VendorsImportPage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\Import\VendorsImportPage.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\Import\VendorsImportPage.Element.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorBuildingPhase\VendorBuildingPhasePage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorBuildingPhase\VendorBuildingPhasePage.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorBuildingPhase\VendorBuildingPhasePage.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorCurrentEstimate\VendorCurrentEstimatePage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorCurrentEstimate\VendorCurrentEstimatePage.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorCurrentEstimate\VendorCurrentEstimatePage.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorProduct\VendorProductPage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorProduct\VendorProductPage.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorProduct\VendorProductPage.Elements.cs" />
+    <Compile Include="Pages\Documents\DocumentPage.Actions.cs" />
+    <Compile Include="Pages\Documents\DocumentPage.Aserters.cs" />
+    <Compile Include="Pages\Documents\DocumentPage.Elements.cs" />
+    <Compile Include="Pages\Documents\DocumentData.cs" />
+    <Compile Include="Pages\Assets\House\HouseDetail\HouseDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HouseDetail\HouseDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\House\HouseDetail\HouseDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\House\HousePage.Actions.cs" />
+    <Compile Include="Pages\Assets\House\HousePage.Aserters.cs" />
+    <Compile Include="Pages\Assets\House\HousePage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\AddOptionGroup\AddOptionGroupModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\AddOptionGroup\AddOptionGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\AddOptionGroup\AddOptionGroupModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupData.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupDetail\OptionGroupDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupDetail\OptionGroupDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupDetail\OptionGroupDetailPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionGroup\OptionGroupPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\AddOptionRoom\AddOptionRoomModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\AddOptionRoom\AddOptionRoomModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\AddOptionRoom\AddOptionRoomModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoomData.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoomPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoomPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionRooms\OptionRoomPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\AddOptionSelectionGroup\AddOptionSelectionGroupModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\AddOptionSelectionGroup\AddOptionSelectionGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\AddOptionSelectionGroup\AddOptionSelectionGroupModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelectionGroup\OptionSelectionGroupPage.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\AddOptionSelection\AddOptionSelectionModal.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\AddOptionSelection\AddOptionSelectionModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\AddOptionSelection\AddOptionSelectionModal.Elements.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\OptionSelectionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\OptionSelectionPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\OptionSelection\OptionSelectionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\AddOption\AddOptionModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\AddOption\AddOptionModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Options\AddOption\AddOptionModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\OptionData.cs" />
+    <Compile Include="Pages\Assets\Options\OptionDetail\OptionDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\OptionDetail\OptionDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Options\OptionDetail\OptionDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Options\OptionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Options\OptionPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Options\OptionPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Series\AddSeries\AddSeriesModal.Actions.cs" />
+    <Compile Include="Pages\Assets\Series\AddSeries\AddSeriesModal.Asserters.cs" />
+    <Compile Include="Pages\Assets\Series\AddSeries\AddSeriesModal.Elements.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesData.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesDetail\SeriesDetailPage.Asserter.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesDetail\SeriesDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesDetail\SeriesDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Series\SeriesPage.Elements.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\AddTaxGroup\AddTaxGroupModal.Actions.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\AddTaxGroup\AddTaxGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\AddTaxGroup\AddTaxGroupModal.Elements.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\TaxGroupPage.Actions.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\TaxGroupPage.Aserters.cs" />
+    <Compile Include="Pages\Costing\TaxGroup\TaxGroupPage.Elements.cs" />
+    <Compile Include="Pages\Costing\CommunitySalesTax\CommunitySalesTax.Actions.cs" />
+    <Compile Include="Pages\Costing\CommunitySalesTax\CommunitySalesTax.Aserters.cs" />
+    <Compile Include="Pages\Costing\CommunitySalesTax\CommunitySalesTax.Elements.cs" />
+    <Compile Include="Pages\CustomField\CustomFieldDetailPage.Asserter.cs" />
+    <Compile Include="Pages\CustomField\CustomFieldDetailPage.Actions.cs" />
+    <Compile Include="Pages\CustomField\CustomFieldDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\AddBOMLogicRule\AddBOMLogicRuleModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\AddBOMLogicRule\AddBOMLogicRuleModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\AddBOMLogicRule\AddBOMLogicRuleModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRuleData.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRuleDetail\BOMLogicRuleDetailData.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRuleDetail\BOMLogicRuleDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRuleDetail\BOMLogicRuleDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRuleDetail\BOMLogicRuleDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRulePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRulePage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BOMLogicRules\BOMLogicRulePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupData.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\AddBuildingPhaseToBuildingGroup\AddPhaseToGroupModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\AddBuildingPhaseToBuildingGroup\AddPhaseToGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\AddBuildingPhaseToBuildingGroup\AddPhaseToGroupModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\BuildingGroupDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\BuildingGroupDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupDetail\BuildingGroupDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\BuildingPhaseTypeData.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddProductToPhase\AddProductToPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddProductToPhase\AddProductToPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddVendorToPhase\AddVendorToPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddVendorToPhase\AddVendorToPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhaseData.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhaseDetail\BuildingPhaseDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhaseDetail\BuildingPhaseDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationDetail\CalculationDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationDetail\CalculationDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationDetail\CalculationDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationData.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryData.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\AddProductToCategory\AddProductToCategoryModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\AddProductToCategory\AddProductToCategoryModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\AddProductToCategory\AddProductToCategoryModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\CategoryDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\CategoryDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryDetail\CategoryDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerData.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductAssignment\ProductAssignmentData.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductCustomFields\ProductCustomFieldsPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductCustomFields\ProductCustomFieldsPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductCustomFields\ProductCustomFieldsPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductSubcomponent\ProductSubcomponentPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductSubcomponent\ProductSubcomponentPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductSubcomponent\ProductSubcomponentPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductAssignment\ProductAssignmentPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductAssignment\ProductAssignmentPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductAssignment\ProductAssignmentPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductData.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductDetail\ProductDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductDetail\ProductDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductDetail\ProductDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\AddProductResource\AddProductResourceModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\AddProductResource\AddProductResourceModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\AddProductResource\AddProductResourceModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\ProductResourceData.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\ProductResourcePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\ProductResourcePage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Products\ProductResources\ProductResourcePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetData.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetDetail\SpecSetDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetDetail\SpecSetDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetDetail\SpecSetDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\StyleImportRulesData.cs" />
+    <Compile Include="Pages\Estimating\Styles\StyleData.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\AddProductToUnit\AddProductToUnitModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\AddProductToUnit\AddProductToUnitModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\AddProductToUnit\AddProductToUnitModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\UnitDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\UnitDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitDetail\UnitDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitData.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseAssignment\UseAssignment.Actions.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseAssignment\UseAssignment.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseAssignment\UseAssignment.Elements.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseAssignment\UseAssignmentData.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseDetail\UseDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseDetail\UseDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Uses\UseDetail\UseDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetData.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetProducts\WorksheetProductsData.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetProducts\WorksheetProductsPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetProducts\WorksheetProductsPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetProducts\WorksheetProductsPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetDetail\WorksheetDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetDetail\WorksheetDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetDetail\WorksheetDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Worksheet\WorksheetPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\AddSpecSetGroup\AddSpecSetGroupModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\AddSpecSetGroup\AddSpecSetGroupModal.Asserter.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\AddSpecSetGroup\AddSpecSetGroupModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\SpecSet\SpecSetPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\AddRule\AddRuleModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\AddRule\AddRuleModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\AddRule\AddRuleModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\StyleImportRulesPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\StyleImportRulesPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\StyleImportRules\StyleImportRulesPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationModal\AddCalculationModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationModal\AddCalculationModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationModal\AddCalculationModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Calculations\CalculationPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\AddType\AddTypeModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\AddType\AddTypeModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\AddType\AddTypeModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\BuildingPhaseTypePage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\BuildingPhaseTypePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhaseType\BuildingPhaseTypePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddBuildingPhase\AddBuildingPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddBuildingPhase\AddBuildingPhaseModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\AddBuildingPhase\AddBuildingPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhasePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhasePage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingPhase\BuildingPhasePage.Elements.cs" />
+    <Compile Include="Pages\Dashboard\DashboardPage.Actions.cs" />
+    <Compile Include="Pages\Dashboard\DashboardPage.Asserter.cs" />
+    <Compile Include="Pages\Dashboard\DashboardPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionData.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionDetail\DivisionDetailPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionDetail\DivisionDetailPage.Elements.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionDetail\DivisionDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionPage.Actions.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionPage.Aserters.cs" />
+    <Compile Include="Pages\Assets\Divisions\DivisionPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\BOMBuildingPhaseRuleData.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\BOMBuildingPhaseRulePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\BOMBuildingPhaseRulePage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\BOMBuildingPhaseRule\BOMBuildingPhaseRulePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\AddBuildingPhaseRule\AddBuildingPhaseRuleModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\QuantityBuildingPhaseRuleData.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\QuantityBuildingPhaseRulePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\QuantityBuildingPhaseRulePage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\QuantityBuildingPhaseRule\QuantityBuildingPhaseRulePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerDetail\ManufacturerDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerDetail\ManufacturerDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerDetail\ManufacturerDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Manufactures\ManufacturerPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\AddBuildingTrade\AddBuildingTradeModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\AddBuildingTrade\AddBuildingTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\AddBuildingTrade\AddBuildingTradeModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\BuildingTradeData.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\BuildingTradePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\BuildingTradePage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingTrade\BuildingTradePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Category\AddCategory\AddCategoryPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Category\AddCategory\AddCategoryPage.Asserter.cs" />
+    <Compile Include="Pages\Estimating\Category\AddCategory\AddCategoryPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Category\CategoryPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Uses\AddUses\AddUsesModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\Uses\AddUses\AddUsesModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Uses\AddUses\AddUsesModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\Uses\UsesData.cs" />
+    <Compile Include="Pages\Estimating\Uses\UsesPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Uses\UsesPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Uses\UsesPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\StyleDetailPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\StyleDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\StyleDetailPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\SubManufacturerPage\SubManufacturerPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\SubManufacturerPage\SubManufacturerPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\Styles\DetailStyles\SubManufacturerPage\SubManufacturerPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Styles\StylePage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Styles\StylePage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Styles\StylePage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Units\AddUnit\AddUnitPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Units\AddUnit\AddUnitPage.Asserter.cs" />
+    <Compile Include="Pages\Estimating\Units\AddUnit\AddUnitPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitPage.Aserters.cs" />
+    <Compile Include="Pages\Estimating\Units\UnitPage.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorData.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorDetail\VendorDetailPage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorDetail\VendorDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorDetail\VendorDetailPage.Elements.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorPage.Actions.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorPage.Aserters.cs" />
+    <Compile Include="Pages\Costing\Vendor\VendorPage.Elements.cs" />
+    <Compile Include="Pages\Import\BOMBuildingPhaseRuleImportPage.cs" />
+    <Compile Include="Pages\Import\BuilderBOMImportPage.cs" />
+    <Compile Include="Pages\Import\BuilderImportPage.cs" />
+    <Compile Include="Pages\Import\CostingImportPage.cs" />
+    <Compile Include="Pages\Import\ImportGridTitle.cs" />
+    <Compile Include="Pages\Import\ProductsImportPage.cs" />
+    <Compile Include="Pages\Import\PurchasingImportPage.cs" />
+    <Compile Include="Pages\Import\TradesImportPage.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\AddDocumentTypes\AddDocumentTypeModal.Actions.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\AddDocumentTypes\AddDocumentTypeModal.Asserters.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\AddDocumentTypes\AddDocumentTypeModal.Elements.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\DocumentTypes.Actions.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\DocumentTypes.Asserters.cs" />
+    <Compile Include="Pages\Jobs\DocumentTypes\DocumentTypes.Elements.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\JobDocuments.Actions.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\JobDocuments.Asserters.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\JobDocuments.Elements.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\Upload\UploadDocumentsModal.Actions.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\Upload\UploadDocumentsModal.Asserters.cs" />
+    <Compile Include="Pages\Jobs\JobDocuments\Upload\UploadDocumentsModal.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Budget\JobBudgetPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Budget\JobBudgetPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\CreatePurchaseOrdersPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\CreatePurchaseOrdersPage.Assters.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\CreatePurchaseOrdersPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\Variance\VarianceModal.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\Variance\VarianceModal.Asserters.cs" />
+    <Compile Include="Pages\Jobs\Job\CreatePurchaseOrders\Variance\VarianceModal.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Estimates\JobEstimatePage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Estimates\JobEstimatePage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Import\JobImportQuantitiesData.cs" />
+    <Compile Include="Pages\Jobs\Job\Import\JobImportPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Import\JobImportPage.Aserters.cs" />
+    <Compile Include="Pages\Jobs\Job\Import\JobImportPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\JobBOMData.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\JobBOMPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\JobBOMPage.Asserts.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\JobBOMPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\OneTimeItem\OneTimeItemModal.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\OneTimeItem\OneTimeItemModal.Asserters.cs" />
+    <Compile Include="Pages\Jobs\Job\JobBOM\OneTimeItem\OneTimeItemModal.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\JobData.cs" />
+    <Compile Include="Pages\Jobs\Job\JobDetail\JobDetailPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\JobDetail\JobDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Jobs\Job\JobDetail\JobDetailPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\JobPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\JobPage.Aserters.cs" />
+    <Compile Include="Pages\Jobs\Job\JobPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\JobSpecSets\JobSpecSetsData.cs" />
+    <Compile Include="Pages\Jobs\Job\JobSpecSets\JobSpecSetsPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\JobSpecSets\JobSpecSetsPage.Asserters.cs" />
+    <Compile Include="Pages\Jobs\Job\JobSpecSets\JobSpecSetsPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Options\JobOptionPage.Aserters.cs" />
+    <Compile Include="Pages\Jobs\Job\Options\JobOptionPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Options\JobOptionPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Quantities\JobQuantitiesData.cs" />
+    <Compile Include="Pages\Jobs\Job\Quantities\JobQuantitiesPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Quantities\JobQuantitiesPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\SchedulingTask\JobSchedulingTaskPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\SchedulingTask\JobSchedulingTaskPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\Vendors\JobVendorsPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\Vendors\JobVendorsPage.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ChangeStatus\ChangeStatusModal.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ChangeStatus\ChangeStatusModal.Asserters.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ChangeStatus\ChangeStatusModal.Elements.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ViewPurchaseOrdersPage.Actions.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ViewPurchaseOrdersPage.Assters.cs" />
+    <Compile Include="Pages\Jobs\Job\ViewPuchaseOrders\ViewPurchaseOrdersPage.Elements.cs" />
+    <Compile Include="Pages\Login\LoginPage.Aserter.cs" />
+    <Compile Include="Pages\Login\LoginPage.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\AddBuildingGroup\AddBuildingGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\AddBuildingGroup\AddBuildingGroupModal.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\AddBuildingGroup\AddBuildingGroupModal.Elements.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupPage.Asserters.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupPage.Actions.cs" />
+    <Compile Include="Pages\Estimating\BuildingGroup\BuildingGroupPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElement\AddElementModal.Actions.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElement\AddElementModal.Asserter.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElement\AddElementModal.Elements.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElementType\AddElementTypeModal.Actions.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElementType\AddElementTypeModal.Asserter.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\AddElementType\AddElementTypeModal.Elements.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\DesignerElementPage.Actions.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\DesignerElementPage.Aserters.cs" />
+    <Compile Include="Pages\Pathway\DesignerElement\DesignerElementPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AddAssetGroup\AddAssetGroupModal.Actions.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AddAssetGroup\AddAssetGroupModal.Asserter.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AddAssetGroup\AddAssetGroupModal.Elements.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AssetGroupPage.Actions.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AssetGroupPage.Aserters.cs" />
+    <Compile Include="Pages\Pathway\AssetGroup\AssetGroupPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsData.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsDetail\AssetsDetailPage.Actions.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsDetail\AssetsDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsDetail\AssetsDetailPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsPage.Actions.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsPage.Aserters.cs" />
+    <Compile Include="Pages\Pathway\Assets\AssetsPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\AddDesignerView\AddDesignerViewModal.Actions.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\AddDesignerView\AddDesignerViewModal.Asserter.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\AddDesignerView\AddDesignerViewModal.Elements.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\DesignerViewPage.Actions.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\DesignerViewPage.Aserters.cs" />
+    <Compile Include="Pages\Pathway\DesignerView\DesignerViewPage.Elements.cs" />
+    <Compile Include="Pages\Pathway\House\HousePage.Actions.cs" />
+    <Compile Include="Pages\Pathway\House\HousePage.Aserters.cs" />
+    <Compile Include="Pages\Pathway\House\HousePage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\AddVendorToPhase\AddVendorToPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\AddVendorToPhase\AddVendorToPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\BuildingPhaseDetail\BuildingPhaseDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\BuildingPhaseDetail\BuildingPhaseDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\BuildingPhasesPage.Asserter.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\BuildingPhasesPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\BuildingPhases\BuildingPhasesPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryData.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryDetail\CostCategoryDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryDetail\CostCategoryDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryDetail\CostCategoryDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\AddCostCode\AddCostCodeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\AddCostCode\AddCostCodeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\AddCostCode\AddCostCodeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodeDetail\CostCodeDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodeDetail\CostCodeDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodeDetail\CostCodeDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodePage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodePage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodePage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCode\CostCodeData.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ChangeStatus\ChangeStatusModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ChangeStatus\ChangeStatusModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ChangeStatus\ChangeStatusModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ManageAllPurchaseOrdersPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ManageAllPurchaseOrdersPage.Assters.cs" />
+    <Compile Include="Pages\Purchasing\PurchaseOrders\ManageAllPurchaseOrders\ManageAllPurchaseOrdersPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\EditTrade\EditTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\EditTrade\EditTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\EditTrade\EditTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\AddTrade\AddTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\AddPhaseToTrade\AddPhaseToTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\AddPhaseToTrade\AddPhaseToTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\AddPhaseToTrade\AddPhaseToTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\AddSchedulingTaskToTrade\AddSchedulingTaskToTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\AddSchedulingTaskToTrade\AddSchedulingTaskToTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\AddSchedulingTaskToTrade\AddSchedulingTaskToTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesExportModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesExportModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesExportModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeUser\AddUserToTrade\AddUserToTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeUser\AddUserToTrade\AddUserToTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeUser\AddUserToTrade\AddUserToTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeUser\TradeBuilderUserPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeUser\TradeBuilderUserPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\AddVendorToTrade\AddVendorToTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\AddVendorToTrade\AddVendorToTradeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\AddVendorToTrade\AddVendorToTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\TradeVendorPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\TradeVendorPage.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeVendor\TradeVendorPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\TradeSchedulingTaskPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\TradeSchedulingTaskPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeSchedulingTask\TradeSchedulingTaskPage.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypeDetail\CostTypeDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypeDetail\CostTypeDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypeDetail\CostTypeDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhaseDetail\CutoffPhaseDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhaseDetail\CutoffPhaseDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhaseDetail\CutoffPhaseDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupDetail\ReleaseGroupDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupDetail\ReleaseGroupDetailPage.Asserts.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupDetail\ReleaseGroupDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeDetail\TradeDetailPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeDetail\TradesDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeDetail\TradeDetailPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\TradeBuildingPhasePage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\TraderBuildingPhasePage.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradeBuildingPhase\TradeBuildingPhasePage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\VendorAssignments\VendorAssignmentsPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\VendorAssignments\VendorAssignmentsPage.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\VendorAssignments\VendorAssignmentsPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\AddTrade\AddTradeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\AddTrade\AddTradeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesData.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesPage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\Trades\TradesPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\WorkCompleted\WorkCompletedPage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\WorkCompleted\WorkCompletedPage.Elements.cs" />
+    <Compile Include="Pages\Resources\ResourceData.cs" />
+    <Compile Include="Pages\Resources\ResourcePage.Actions.cs" />
+    <Compile Include="Pages\Resources\ResourcePage.Asserters.cs" />
+    <Compile Include="Pages\Resources\ResourcePage.Elements.cs" />
+    <Compile Include="Pages\Resources\ResourceTypes.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\AddContractDocument\ContractDocumentDetailPage.Actions.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\AddContractDocument\ContractDocumentDetailPage.Asserters.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\AddContractDocument\ContractDocumentDetailPage.Elements.cs" />
+    <Compile Include="Pages\Sales\Prospect\ProspectPage.Actions.cs" />
+    <Compile Include="Pages\Sales\Prospect\ProspectPage.Aserters.cs" />
+    <Compile Include="Pages\Sales\Prospect\ProspectPage.Elements.cs" />
+    <Compile Include="Pages\Sales\Customer\CustomerPage.Actions.cs" />
+    <Compile Include="Pages\Sales\Customer\CustomerPage.Aserters.cs" />
+    <Compile Include="Pages\Sales\Customer\CustomerPage.Elements.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\ContractDocumentData.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\ContractDocumentPage.Actions.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\ContractDocumentPage.Aserters.cs" />
+    <Compile Include="Pages\Sales\ContractDocument\ContractDocumentPage.Elements.cs" />
+    <Compile Include="Pages\Settings\BOMSetting\BOMSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\BOMSetting\BOMSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Builder\Lot\LotSettingData.cs" />
+    <Compile Include="Pages\Settings\Estimating\EstimatingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Estimating\EstimatingPage.Asserters.cs" />
+    <Compile Include="Pages\Settings\Estimating\EstimatingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\HomeFront\HomeFrontPage.Actions.cs" />
+    <Compile Include="Pages\Settings\BuilderMT\BuilderMTPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Option\OptionDisplayFormat.cs" />
+    <Compile Include="Pages\Settings\Builder\Product\ProductSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Product\ProductSettingPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Builder\Product\ProductSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Builder\Option\OptionSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Option\OptionSettingPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Builder\Option\OptionSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Builder\Community\CommunitySettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Community\CommunitySettingPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Builder\Community\CommunitySettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Builder\House\HouseSettingPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Builder\House\HouseSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Builder\House\HouseSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Lot\LotSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Builder\Lot\LotSettingPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Builder\Lot\LotSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\MainSetting\MainSettingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\MainSetting\MainSettingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Specitup\SpecitupPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Specitup\SpecitupPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Sage300CRE\Sage300CREPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Sage300CRE\Sage300CREPage.Assters.cs" />
+    <Compile Include="Pages\Settings\Sage300CRE\Sage300CREPage.Elements.cs" />
+    <Compile Include="Pages\Settings\MSNAV\MSNAVPage.Actions.cs" />
+    <Compile Include="Pages\Settings\MSNAV\MSNAVPage.Elements.cs" />
+    <Compile Include="Pages\Settings\BuildPro\BuildProData.cs" />
+    <Compile Include="Pages\Settings\BuildPro\BuildProPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\BuildPro\BuildProPage.Actions.cs" />
+    <Compile Include="Pages\Settings\BuildPro\BuildProPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Costing\CostingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Costing\CostingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\CustomField\CustomFieldData.cs" />
+    <Compile Include="Pages\Settings\CustomField\CustomFieldModal.Actions.cs" />
+    <Compile Include="Pages\Settings\CustomField\CustomFieldModal.Asserters.cs" />
+    <Compile Include="Pages\Settings\CustomField\CustomFieldModal.Elements.cs" />
+    <Compile Include="Pages\Settings\Purchasing\PurchasingPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Purchasing\PurchasingPage.Assters.cs" />
+    <Compile Include="Pages\Settings\Purchasing\PurchasingPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Saberis\SaberisPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Saberis\SaberisPage.Aserters.cs" />
+    <Compile Include="Pages\Settings\Saberis\SaberisPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Sage300CRE\Sage300CREPageData.cs" />
+    <Compile Include="Pages\Settings\Users\UserData.cs" />
+    <Compile Include="Pages\Settings\Users\UsersDetail\UserDetailPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Users\UsersDetail\UserDetailPage.Elements.cs" />
+    <Compile Include="Pages\Settings\Users\UserPage.Actions.cs" />
+    <Compile Include="Pages\Settings\Users\UserPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\DocumentTypeData.cs" />
+    <Compile Include="Pages\UserMenu\Role\RoleData.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePermission\RolePermissionPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePermission\RolePermissionPage.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePermission\RolePermissionPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\AddScheduledTask\AddScheduledTaskModal.Actions.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\AddScheduledTask\AddScheduledTaskModal.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\AddScheduledTask\AddScheduledTaskModal.Elements.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\ScheduledTaskData.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\ScheduledTaskPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\ScheduledTaskPage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\ScheduledTasks\ScheduledTaskPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\AddDocument\AddDocumentType.Actions.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\AddDocument\AddDocumentType.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\AddDocument\AddDocumentType.Elements.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\DocumentTypePage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\DocumentTypePage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\DocumentType\DocumentTypePage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\Setting\SettingPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\Setting\SettingPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Setting\SettingPage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\AddSubscription\AddSubscriptionModal.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\AddSubscription\AddSubscriptionModal.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\AddSubscription\AddSubscriptionModal.Elements.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\SubscriptionData.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\SubscriptionPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\SubscriptionPage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\Subscription\SubscriptionPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\Role\AddRole\AddRoleModal.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Role\AddRole\AddRoleModal.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\Role\AddRole\AddRoleModal.Elements.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\Role\RolePage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\User\AddUser\AddUserDetailPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\User\AddUser\AddUserDetailPage.Asserters.cs" />
+    <Compile Include="Pages\UserMenu\User\AddUser\AddUserDetailPage.Elements.cs" />
+    <Compile Include="Pages\UserMenu\User\UserData.cs" />
+    <Compile Include="Pages\UserMenu\User\UserPage.Actions.cs" />
+    <Compile Include="Pages\UserMenu\User\UserPage.Aserters.cs" />
+    <Compile Include="Pages\UserMenu\User\UserPage.Elements.cs" />
+    <Compile Include="Script\Demo\OptionGroup_Export_BeyondCompare.cs" />
+    <Compile Include="Script\Integrations\Integrations_PIPE_33250.cs" />
+    <Compile Include="Script\Integrations\RT_01166.cs" />
+    <Compile Include="Script\Integrations\RT_01182.cs" />
+    <Compile Include="Script\Section III\A02_C_PIPE_49907.cs" />
+    <Compile Include="Script\Section III\A03_B_PIPE_35654.cs" />
+    <Compile Include="Script\Section III\A04_C_PIPE_36148.cs" />
+    <Compile Include="Script\Section III\A05_B_PIPE_24071.cs" />
+    <Compile Include="Script\Section III\B01_B_PIPE_19516.cs" />
+    <Compile Include="Script\Section III\B01_F_PIPE_36125.cs" />
+    <Compile Include="Script\Section III\B02_B_PIPE_22393.cs" />
+    <Compile Include="Script\Section III\B02_C_PIPE_35655.cs" />
+    <Compile Include="Script\Section III\B03_B_PIPE_30935.cs" />
+    <Compile Include="Script\Section III\B03_C_PIPE_49992.cs" />
+    <Compile Include="Script\Section III\B05_B_PIPE_22395.cs" />
+    <Compile Include="Script\Section III\B06_B_PIPE_35658.cs" />
+    <Compile Include="Script\Section III\B12_B_PIPE_30283.cs" />
+    <Compile Include="Script\Section III\B10_B_PIPE_22396.cs" />
+    <Compile Include="Script\Section III\B14_B_PIPE_30285.cs" />
+    <Compile Include="Script\Section III\B17_B_PIPE_30286.cs" />
+    <Compile Include="Script\Section III\C01_G_PIPE_31232.cs" />
+    <Compile Include="Script\Section III\C01_J_PIPE_40258.cs" />
+    <Compile Include="Script\Section III\C01_PIPE_21011.cs" />
+    <Compile Include="Script\Section III\D01_C_PIPE_31048.cs" />
+    <Compile Include="Script\Section III\D01_B_PIPE_31181.cs" />
+    <Compile Include="Script\Section III\D01_H_PIPE_31068.cs" />
+    <Compile Include="Script\Section III\E03_B_PIPE_31097.cs" />
+    <Compile Include="Script\Section III\D01_M_PIPE_40259.cs" />
+    <Compile Include="Script\Section III\D05_B_PIPE_31088.cs" />
+    <Compile Include="Script\Section III\D05_C_PIPE_31092.cs" />
+    <Compile Include="Script\Section III\E08_A_PIPE_32999.cs" />
+    <Compile Include="Script\Section III\I11_B_PIPE_35650.cs" />
+    <Compile Include="Script\Section III\J05_RT_01167.cs" />
+    <Compile Include="Script\Section III\J03_RT_01168.cs" />
+    <Compile Include="Script\Section III\J01_RT_01177.cs" />
+    <Compile Include="Script\Section III\J02_RT_01176.cs" />
+    <Compile Include="Script\Section III\C01_PIPE_21014.cs" />
+    <Compile Include="Script\Section III\A02_B_PIPE_22388.cs" />
+    <Compile Include="Script\Section III\D01_F_PIPE_41553.cs" />
+    <Compile Include="Script\Section III\A05_E_PIPE_44025.cs" />
+    <Compile Include="Script\Section III\RT_01158.cs" />
+    <Compile Include="Script\Section III\RT_01229.cs" />
+    <Compile Include="Script\Section III\RT_01108.cs" />
+    <Compile Include="Script\Section III\RT_01105.cs" />
+    <Compile Include="Script\Section III\RT_01106.cs" />
+    <Compile Include="Script\Section III\RT_01109.cs" />
+    <Compile Include="Script\Section III\RT_01107.cs" />
+    <Compile Include="Script\Section III\RT_01098.cs" />
+    <Compile Include="Script\Section III\RT_01101.cs" />
+    <Compile Include="Script\Section III\RT_01102.cs" />
+    <Compile Include="Script\Section III\RT_01104.cs" />
+    <Compile Include="Script\Section III\RT_01103.cs" />
+    <Compile Include="Script\Section III\RT_01097.cs" />
+    <Compile Include="Pages\Purchasing\CostType\AddCostType\AddCostTypeModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostType\AddCostType\AddCostTypeModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\CostType\AddCostType\AddCostTypeModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypeData.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypePage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypePage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\CostType\CostTypePage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\AddCutoffPhase\AddCutoffPhaseModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\AddCutoffPhase\AddCutoffPhaseModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\AddCutoffPhase\AddCutoffPhaseModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhaseData.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhasePage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhasePage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\CutoffPhase\CutoffPhasePage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\AddCostCategory\AddCostCategoryPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\AddCostCategory\AddCostCategoryPage.Asserter.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\AddCostCategory\AddCostCategoryPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\CostCategory\CostCategoryPage.Elements.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\AddReleaseGroup\AddReleaseGroupModal.Actions.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\AddReleaseGroup\AddReleaseGroupModal.Asserters.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\AddReleaseGroup\AddReleaseGroupModal.Elements.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupData.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupPage.Actions.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupPage.Aserters.cs" />
+    <Compile Include="Pages\Purchasing\ReleaseGroup\ReleaseGroupPage.Elements.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\Section III\RT_01099.cs" />
+    <Compile Include="Script\Section III\RT_01094.cs" />
+    <Compile Include="Script\Section III\RT_01096.cs" />
+    <Compile Include="Script\Section III\RT_01021.cs" />
+    <Compile Include="Script\Section III\RT_01023.cs" />
+    <Compile Include="Script\Section III\RT_01022.cs" />
+    <Compile Include="Script\Section III\RT_01073.cs" />
+    <Compile Include="Script\Section III\RT_01090.cs" />
+    <Compile Include="Script\Section III\RT_01089.cs" />
+    <Compile Include="Script\Section III\RT_01091.cs" />
+    <Compile Include="Script\Section III\RT_01088.cs" />
+    <Compile Include="Script\Section III\RT_01093.cs" />
+    <Compile Include="Script\Section III\RT_01092.cs" />
+    <Compile Include="Script\Section III\RT_01095.cs" />
+    <Compile Include="Script\Section III\RT_01100.cs" />
+    <Compile Include="Script\Section III\RT_01179.cs" />
+    <Compile Include="Script\Section III\RT_01142.cs" />
+    <Compile Include="Script\Section III\RT_01141.cs" />
+    <Compile Include="Script\Section III\RT_01083.cs" />
+    <Compile Include="Script\Section III\RT_01140.cs" />
+    <Compile Include="Script\Section III\RT_01082.cs" />
+    <Compile Include="Script\Section III\RT_01026.cs" />
+    <Compile Include="Script\Section III\RT_01074.cs" />
+    <Compile Include="Script\Section III\RT_01024.cs" />
+    <Compile Include="Script\Section III\RT_01084.cs" />
+    <Compile Include="Script\Section III\RT_01028.cs" />
+    <Compile Include="Script\Section III\RT_01159.cs" />
+    <Compile Include="Script\Section III\RT_01157.cs" />
+    <Compile Include="Script\Section III\RT_01156.cs" />
+    <Compile Include="Script\Section III\RT_01080.cs" />
+    <Compile Include="Script\Section III\RT_01075.cs" />
+    <Compile Include="Script\Section III\RT_01081.cs" />
+    <Compile Include="Script\Section III\RT_01076.cs" />
+    <Compile Include="Script\Section III\RT_01079.cs" />
+    <Compile Include="Script\Section III\RT_01078.cs" />
+    <Compile Include="Script\Section III\RT_01077.cs" />
+    <Compile Include="Script\Section III\RT_01027.cs" />
+    <Compile Include="Script\Section III\RT_01025.cs" />
+    <Compile Include="Script\Section III\RT_01072.cs" />
+    <Compile Include="Script\Section III\J07_S_PIPE_43973.cs" />
+    <Compile Include="Script\Section II\RT_01071.cs" />
+    <Compile Include="Script\Section II\RT_01020.cs" />
+    <Compile Include="Script\Section II\RT_01019.cs" />
+    <Compile Include="Script\Section II\RT_01018.cs" />
+    <Compile Include="Script\Section II\RT_01017.cs" />
+    <Compile Include="Script\Section II\RT_01016.cs" />
+    <Compile Include="Script\Section II\RT_01015.cs" />
+    <Compile Include="Script\Section II\RT_01014.cs" />
+    <Compile Include="Script\Section II\RT_01013.cs" />
+    <Compile Include="Script\Section II\RT_01012.cs" />
+    <Compile Include="Script\Section II\RT_01011.cs" />
+    <Compile Include="Script\Section IV\A02_G_RT_01204.cs" />
+    <Compile Include="Script\Section IV\A02_N_PIPE_36129.cs" />
+    <Compile Include="Script\Section IV\A04_B_PIPE_49912.cs" />
+    <Compile Include="Script\Section IV\A04_G_PIPE_30937.cs" />
+    <Compile Include="Script\Section IV\A04_I_PIPE_34161.cs" />
+    <Compile Include="Script\Section IV\A04_J_PIPE_32981.cs" />
+    <Compile Include="Script\Section IV\A04_K_PIPE_39504.cs" />
+    <Compile Include="Script\Section IV\A04_Q_PIPE_35652.cs" />
+    <Compile Include="Script\Section IV\A04_R_PIPE_36132.cs" />
+    <Compile Include="Script\Section IV\A04_S_PIPE_44395.cs" />
+    <Compile Include="Script\Section IV\A04_T_PIPE_44420.cs" />
+    <Compile Include="Script\Section IV\A04_U_PIPE_36138.cs" />
+    <Compile Include="Script\Section IV\A04_W_PIPE_47899.cs" />
+    <Compile Include="Script\Section IV\A04_X_PIPE_36143.cs" />
+    <Compile Include="Script\Section IV\A05_D_PIPE_42430.cs" />
+    <Compile Include="Script\Section IV\A05_E_PIPE_42429.cs" />
+    <Compile Include="Script\Section IV\A05_F_PIPE_49911.cs" />
+    <Compile Include="Script\Section IV\B01_D_RT_01247.cs" />
+    <Compile Include="Script\Section IV\B01_F_RT_01249.cs" />
+    <Compile Include="Script\Section IV\B01_E_RT_01248.cs" />
+    <Compile Include="Script\Section IV\B01_A_RT_01244.cs" />
+    <Compile Include="Script\Section IV\B01_B_RT_01245.cs" />
+    <Compile Include="Script\Section IV\B01_C_RT_01246.cs" />
+    <Compile Include="Script\Section IV\A02_H_RT_01205.cs" />
+    <Compile Include="Script\Section IV\A02_K_RT_01208.cs" />
+    <Compile Include="Script\Section IV\A02_L_RT_01209.cs" />
+    <Compile Include="Script\Section IV\A03_A_RT_01210.cs" />
+    <Compile Include="Script\Section IV\A04_C_RT_01213.cs" />
+    <Compile Include="Script\Section IV\A04_B_RT_01212.cs" />
+    <Compile Include="Script\Section IV\A04_D_RT_01214.cs" />
+    <Compile Include="Script\Section IV\A04_F_RT_01216.cs" />
+    <Compile Include="Script\Section IV\A02_J_RT_01207.cs" />
+    <Compile Include="Script\Section IV\A04_E_RT_01215.cs" />
+    <Compile Include="Script\Section IV\A07_A_RT_01222.cs" />
+    <Compile Include="Script\Section IV\A05_Z.cs" />
+    <Compile Include="Script\Section IV\A05_B_RT_01219.cs" />
+    <Compile Include="Script\Section IV\A05_C_RT_01172.cs" />
+    <Compile Include="Script\Section IV\A08_A_RT_01223.cs" />
+    <Compile Include="Script\Section IV\A06_A_RT_01221.cs" />
+    <Compile Include="Script\Section IV\A01_A_RT_01195.cs" />
+    <Compile Include="Script\Section IV\A01_B_RT_01196.cs" />
+    <Compile Include="Script\Section IV\A01_C_RT_01197.cs" />
+    <Compile Include="Script\Section IV\A02_A_RT_01198.cs" />
+    <Compile Include="Script\Section IV\A02_B_RT_01199.cs" />
+    <Compile Include="Script\Section IV\A02_C_RT_01200.cs" />
+    <Compile Include="Script\Section IV\A02_D_RT_01201.cs" />
+    <Compile Include="Script\Section IV\A02_E_RT_01202.cs" />
+    <Compile Include="Script\Section IV\A02_I_RT_01206.cs" />
+    <Compile Include="Script\Section IV\A02_F_RT_01203.cs" />
+    <Compile Include="Script\Section III\J04_RT_01228.cs" />
+    <Compile Include="Script\Section IV\A04_A_RT_01211.cs" />
+    <Compile Include="Script\Section IV\B01_G_PIPE_33373.cs" />
+    <Compile Include="Script\Section IV\B01_G_PIPE_34177.cs" />
+    <Compile Include="Script\Section IV\B01_I_PIPE_45580.cs" />
+    <Compile Include="Script\Section IV\B01_J_PIPE_49901.cs" />
+    <Compile Include="Script\Section IV\B05_A_PIPE_18660.cs" />
+    <Compile Include="Script\Section IV\B08_A_PIPE_19175.cs" />
+    <Compile Include="Script\Section IV\B08_A_RT_01258.cs" />
+    <Compile Include="Script\Section IV\B07_A_RT_01257.cs" />
+    <Compile Include="Script\Section IV\B03_A_RT_01251.cs" />
+    <Compile Include="Script\Section IV\B05_A_RT_01254.cs" />
+    <Compile Include="Script\Section IV\B04_A_RT_01253.cs" />
+    <Compile Include="Script\Section IV\B03_B_RT_01252.cs" />
+    <Compile Include="Script\Section IV\A10_A_RT_01225.cs" />
+    <Compile Include="Script\Section IV\B06_A_RT_01256.cs" />
+    <Compile Include="Script\Section IV\A11_A_RT_01226.cs" />
+    <Compile Include="Script\Section IV\A05_A_RT_01218.cs" />
+    <Compile Include="Script\Section IV\A09_A_RT_01224.cs" />
+    <Compile Include="Script\Section IV\A11_B_RT_01227.cs" />
+    <Compile Include="Script\Section IV\B02_A_RT_01250.cs" />
+    <Compile Include="Script\Section IV\B09_A_PIPE_19177.cs" />
+    <Compile Include="Script\Section IV\B09_C_PIPE_39505.cs" />
+    <Compile Include="Script\Section IV\B10_B_PIPE_19180.cs" />
+    <Compile Include="Script\Section IV\C01_A_PIPE_18716.cs" />
+    <Compile Include="Script\Section IV\C01_B_PIPE_18715.cs" />
+    <Compile Include="Script\Section IV\C01_C_PIPE_18714.cs" />
+    <Compile Include="Script\Section IV\C01_D_PIPE_18713.cs" />
+    <Compile Include="Script\Section IV\C02_C_PIPE_49910.cs" />
+    <Compile Include="Script\Section IV\C02_F_PIPE_49898.cs" />
+    <Compile Include="Script\Section IV\E01_A_PIPE_29731.cs" />
+    <Compile Include="Script\Section IV\C01_G_PIPE_49608.cs" />
+    <Compile Include="Script\Section IV\E06_A_PIPE_34868.cs" />
+    <Compile Include="Script\Section X\UAT_HOTFIX_PIPE_48018.cs" />
+    <Compile Include="Script\Section IV\C01_F_PIPE_43463.cs" />
+    <Compile Include="Script\Section IV\C02_E_PIPE_36127.cs" />
+    <Compile Include="Script\Section IV\C01_E_PIPE_34880.cs" />
+    <Compile Include="Script\Section IV\D01_A_PIPE_31157.cs" />
+    <Compile Include="Script\Section IV\D01_B_PIPE_19559.cs" />
+    <Compile Include="Script\Section IV\D01_F_PIPE_31177.cs" />
+    <Compile Include="Script\Section IV\D01_E_PIPE_31173.cs" />
+    <Compile Include="Script\Section IV\D01_D_PIPE_31169.cs" />
+    <Compile Include="Script\Section IV\D01_C_PIPE_19560.cs" />
+    <Compile Include="Script\Section IV\D01_H_PIPE_38229.cs" />
+    <Compile Include="Script\Section IV\E02_A_PIPE_18617.cs" />
+    <Compile Include="Script\Section IV\E05_A_PIPE_18708.cs" />
+    <Compile Include="Script\Section IV\E03_A_PIPE_18630.cs" />
+    <Compile Include="Script\Section IV\E04_A_PIPE_31199.cs" />
+    <Compile Include="Script\Section IV\E06_A_PIPE_18677.cs" />
+    <Compile Include="Script\Section IV\E06_F_PIPE_34871.cs" />
+    <Compile Include="Script\Section IV\E06_G_PIPE_34901.cs" />
+    <Compile Include="Script\Section IV\E06_I_PIPE_34873.cs" />
+    <Compile Include="Script\Section IV\E06_K_PIPE_40217.cs" />
+    <Compile Include="Script\Section IV\E07_PIPE_34942.cs" />
+    <Compile Include="Script\Section IV\E07_PIPE_34948.cs" />
+    <Compile Include="Script\Section IV\E06_H_PIPE_34872.cs" />
+    <Compile Include="Script\Section I\RT_01001.cs" />
+    <Compile Include="Pages\Template\TemplatePage.Elements.cs" />
+    <Compile Include="Pages\Template\TemplatePage.Actions.cs" />
+    <Compile Include="Script\Section I\RT_01005.cs" />
+    <Compile Include="Script\Section I\RT_01004.cs" />
+    <Compile Include="Script\Section I\RT_01003.cs" />
+    <Compile Include="Script\Section I\RT_01008.cs" />
+    <Compile Include="Script\Section I\RT_01007.cs" />
+    <Compile Include="Script\Section I\RT_01006.cs" />
+    <Compile Include="Script\Section VII\NON_UAT_HOTFIX_PIPE_33017.cs" />
+    <Compile Include="Script\Section VII\PIPE_34506.cs" />
+    <Compile Include="Script\Section VIII\UAT_HOTFIX_PIPE_34678.cs" />
+    <Compile Include="Script\Section VIII\UAT_HOTFIX_PIPE_35050.cs" />
+    <Compile Include="Script\Section VIII\UAT_HOTFIX_PIPE_35568.cs" />
+    <Compile Include="Script\Section VII\PIPE_38874.cs" />
+    <Compile Include="Script\Section VIII\UAT_HOTFIX_PIPE_35664.cs" />
+    <Compile Include="Script\Section VII\PIPE_46759.cs" />
+    <Compile Include="Script\Section VII\PIPE_43889.cs" />
+    <Compile Include="Script\Section V\A01_RT_01290.cs" />
+    <Compile Include="Script\Section V\A03_PIPE_21063.cs" />
+    <Compile Include="Script\Section V\A1_Performance_Test_BOM_2.cs" />
+    <Compile Include="Script\Section V\A1_Performance_Test_BOM_3.cs" />
+    <Compile Include="Script\Section V\A1_Performance_Test_BOM.cs" />
+    <Compile Include="Script\Section V\A1_PIPE_31216.cs" />
+    <Compile Include="Script\Section V\A5_B_PIPE_19163.cs" />
+    <Compile Include="Script\Section V\A5_A_PIPE_19165.cs" />
+    <Compile Include="Script\Section V\A5_PIPE_19166.cs" />
+    <Compile Include="Script\Section V\RT_01297.cs" />
+    <Compile Include="Script\Section V\RT_01295.cs" />
+    <Compile Include="Script\Section VIII\UAT_HOTFIX_PIPE_30850.cs" />
+    <Compile Include="Script\Section X\UAT_HOTFIX_PIPE_38082.cs" />
+    <Compile Include="Script\Section X\UAT_HOTFIX_PIPE_32020.cs" />
+    <Compile Include="Script\Section X\UAT_HOTFIX_PIPE_48407.cs" />
+    <Compile Include="Script\Section X\UAT_HOTFIX_PIPE_49402.cs" />
+    <Compile Include="Script\Section_XIII\A01_A_PIPE_49920.cs" />
+    <Compile Include="Script\Section_XII\A01_D_PIPE_50514.cs" />
+    <Compile Include="Script\Template\TemplateScript.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_19175.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_19177.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_19180.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_32981.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_34161.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_36129.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_44395.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_45580.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_47899.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_49910.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_49911.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_49912.cs" />
+    <Compile Include="Script\TestData\Section VIII\TestData_PIPE_34678.cs" />
+    <Compile Include="Script\TestData\Section VIII\TestData_PIPE_35050.cs" />
+    <Compile Include="Script\TestData\Section VIII\TestData_PIPE_35568.cs" />
+    <Compile Include="Script\TestData\Section X\TestData_UAT_HOTFIX_PIPE_48407.cs" />
+    <Compile Include="Script\TestData\Section_XIII\TestData_PIPE_49920.cs" />
+    <Compile Include="Script\TestData\Section_XII\TestData_PIPE_50514.cs" />
+    <Compile Include="Script\TestData\TestDataCommon.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_18660.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_35652.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_36132.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_39504.cs" />
+    <Compile Include="Script\TestData\Section IV\TestData_PIPE_39505.cs" />
+    <Compile Include="SetUp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pipeline.Common\Pipeline.Common.csproj">
+      <Project>{5db9f315-961c-4711-89d0-4d2a47312509}</Project>
+      <Name>Pipeline.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataInputFiles\Assets\CommunityParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Multiple_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Existing_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Duplicate_Community_Code.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Duplicate_Community_Name.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Empty_File.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Invalid_Transfer_Separater_Charater.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Missing_Close_Charater.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Missing_Transfer_Separator_Charater.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_New_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Without_Data.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Without_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Community\Pipeline_Communities_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\DocumentParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\House\ImportHouseQuantities_CSV_ImportFile_PIPE_35652.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Assets\Sitemap\Test_01.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\BidCostImport\Pipeline_BidCosts_House.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\BidCostImport\Pipeline_BidCosts_House_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\BidCostImport\Pipeline_BidCosts_House_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\BidCostImport\Pipeline_BidCosts_House_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_36127.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_II.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_II_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_II_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_IV.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_IV_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_IV_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_V.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_V_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_44420_V_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_48407_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_48407_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_48407_3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\BidCostImport\Pipeline_BidCosts_House.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\VendorToCommunityOverridesImport\Pipeline_VendorToCommunityOverrides.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\VendorToBuildingPhaseImport\Pipeline_VendorToBuildingPhase.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\VendorImport\Pipeline_Vendor.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Community.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_CommunityOptionHouse.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_CommunityOptionHouse_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_CommunityOptionHouse_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_CommunityOptionHouse_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Community_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Community_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Community_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_CommunityOptionHouse.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_House.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_House_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_House_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_House_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_House.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Option_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Option_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Option_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\HistoricalBidCostImport\Pipeline_HistoricalBidCosts_Option.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\ProductCostsImport\BaseCostsImport\Pipeline_BaseCosts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\ProductCostsImport\BaseCostsImport\Pipeline_BaseCosts_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\ProductCostsImport\BaseCostsImport\Pipeline_BaseCosts_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Costing\ProductCostsImport\BaseCostsImport\Pipeline_BaseCosts_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentCSV.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentDOC.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentDOCX.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentPDF.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentPPTX.pptx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentXLS.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentXLSX.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentXMLS.xmls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentZIP.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\BuildingPhaseParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Calculations\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Calculations\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Calculations\Pipeline_SpecSetProducts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Calculations\Pipeline_Subcomponents.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_Invalid_Transfer_Separater_Charater.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_Existing_Categories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_New_Categories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_Without_Data.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_Without_header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_Categories_Wrong_format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Categories\Pipeline_ProductToCategory_Valid_Data.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUses_Invalid_Transfer_Separater_Charater.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUses_Without_Data.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUses_Without_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUse_Existing_Use.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUse_New_Use.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\Uses\Pipeline_ProductUse_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01244\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01244\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01245\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01246\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01246\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01248\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01248\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01249\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01249\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01256\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01256\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01257\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01257\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01258\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_01258\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_18660\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_18660\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_18660\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_18660\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_CommunityOptions.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_House_Communities_QA_RT_House_PIPE_19165.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Lots.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_OptionProducts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Options_QA_RT_House_PIPE_19165.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Quantities_QA_RT_House_PIPE_19165_SpecifiedCommunity.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_SpecSetGroups.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_SpecSet_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_SpecSet_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19165\Pipeline_Units.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_Categories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19177\Pipeline_SpecSetProducts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19559\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19559\Pipeline_VendorsToBuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19560\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19560\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_19560\Pipeline_VendorsToProducts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21011\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21011\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21011\ImportOption\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21011\ImportProduct\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21014\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21014\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21014\ImportOption\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21014\ImportProduct\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21063\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_21063\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_22388\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_22393\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_22396\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30283\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30283\Pipeline_Categories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30283\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups 1_3.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_10.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_11.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_12.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_1_1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_3.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_4.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_5.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_6.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_7.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_8.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30285\ImportSpecSet\Pipeline_SpecSetGroups_9.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30286\Pipeline_SpecSetProducts.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30935\Pipeline_BOMBuildingPhaseRulesErrorFile_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30935\Pipeline_BOMBuildingPhaseRules_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_30935\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31216\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31216\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31228\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31228\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31228\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31232\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_31232\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_32020\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_32020\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_32981\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_32981\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_33017\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_33017\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_33373\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_33373\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34161\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34161\Pipeline_Categories.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34161\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34161\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34177\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34177\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35050\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35050\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35050\ImportOption\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35050\ImportProduct\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34678\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_34678\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35652\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35652\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36125\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36125\ImportProduct\Pipeline_Products_II.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36125\ImportProduct\Pipeline_Products_III.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36125\ImportProduct\Pipeline_Products_I_2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36125\ImportProduct\Pipeline_Products_I_3.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35568\ImportBuildingPhase\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_35568\ImportProduct\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36127\BuildingPhases\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36127\Community\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36127\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36127\Products\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36129\ImportLot\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36129\ImportOption\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36132\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36138\Community_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36138\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36138\Import_Worksheet_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36148\Community_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_36148\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_39504\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_39504\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_39504\Pipeline_ProductUses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_39505\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_39505\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_42429\Community_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_42429\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_42430\Community_Option.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_42430\Import_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_44395\Pipeline_BuildingPhases_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_44395\Pipeline_Products_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_RT_01225\Pipeline_Options_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_RT_01247\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPE_RT_01247\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\PIPI_22395\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01081\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01092\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01158\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01158\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01158\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01158\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01158\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01201\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01201\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01200\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01215\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01215\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01215\Pipeline_House_Communities_QA_RT_Auto_House_RT_01215.csv" />
+    <None Include="DataInputFiles\Import\RT_01218\Pipeline_Options.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_CustomOptionProducts_RT_QA_CustomOption.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_Vendors.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01295\Pipeline_VendorsToBuildingPhases_QA_RT_Vendor_RT_01295.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_BuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_Products.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_Vendors.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_VendorsToBuildingPhases_QA_RT_Vendor_RT_01297.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_Worksheets_QA_RT_Worksheet_Automation.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01297\Pipeline_Worksheets_QA_RT_Worksheet_RT_01297_02.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\TestData\Pipeline_Lots_In_Community.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Jobs\UploadFiles\TEST PDF FILE.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodesImport\Pipeline_CostCodes.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodesImport\Pipeline_CostCodes_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodesImport\Pipeline_CostCodes_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodesImport\Pipeline_CostCodes_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodeParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01200\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01200\Pipeline_Lots.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01202\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01202\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01202\Pipeline_Lots.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01203\Pipeline_Communities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01203\Pipeline_Houses.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Import\RT_01203\Pipeline_Lots.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Pathway\DesignElementParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Pathway\AssetParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Pathway\AssetGroupParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Pathway\DesignerViewParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Pathway\HouseParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\BuildingTradeParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCodeParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostTypeParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\Cutoff Phase\Pipeline_OptionGroupsToCutOffPhase.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\Cutoff Phase\Pipeline_OptionsToCutOffPhase.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CutoffPhaseParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\CostCategoryParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Estimating\BuildingTradeParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\LoginParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\DashboardParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\ReleaseGroupParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToPhase\Pipeline_TradesToBuildingPhases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToPhase\Pipeline_TradesToBuildingPhases_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToPhase\Pipeline_TradesToBuildingPhases_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToPhase\Pipeline_TradesToBuildingPhases_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToScheduling\Pipeline_TradesToScheduling.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToScheduling\Pipeline_TradesToScheduling_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToScheduling\Pipeline_TradesToScheduling_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToScheduling\Pipeline_TradesToVendors_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToVendor\Pipeline_TradesToVendors.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToVendor\Pipeline_TradesToVendors_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToVendor\Pipeline_TradesToVendors_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\TradesToVendor\Pipeline_TradesToVendors_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="DataInputFiles\Costing\ProductCostsImport\BaseCostsImport\Pipeline_BaseCosts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Import\PIPE_49901\ErrorMessage.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Import\PIPE_49992\ErrorMessage4Chars.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Import\PIPE_49992\ErrorMessage6Chars.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\GIF_TestImage.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\JPEG_TestImage.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\JPG_TestImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\InvalidTextFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\PNG_TestImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\Sample-jpg-image-5mb.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\UploadFiles\SVG_TestImage.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Purchasing\CostCodesImport\Pipeline_CostCodes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades_With_InvalidSpecialChracters.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades_Invalid_Separator.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades_No_Header.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades_Wrong_Format.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Purchasing\TradesImport\Trades\Pipeline_Trades.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Resources\Params\ResourceParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Sales\ProspectParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Sales\CustomerParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Sales\ContractDocumentParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Sales\SalesContract.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Settings\CustomField\CustomFieldParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Settings\Builder\LotParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Settings\SettingsParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\UserMenu\ScheduledTasksParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\UserMenu\SubscriptionParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\UserMenu\RoleParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\UserMenu\DocumentParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\UserMenu\UserParams.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <Compile Include="Pages\Login\LoginPage.Actions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_PIPE_32020.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_A04_J_PIPE_32981.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_DefaultCommunity_PIPE_35568.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_A04_J_PIPE_32981.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\ImportHouseQuantities_SpecificCommunity_PIPE_34678.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\Sitemap\Test_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\Sitemap\Test_03.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\hn-02.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_PIPE_31216.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Assets\House\HouseQuantities_OptionCustom_PIPE_31216.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\Import_Job_No_Option_Specific_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\Import_Job_No_Option_Specific_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\Import_Job_No_Option_Specific_3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\QA_JOB_Import_Quantity_NoOptionsSpecified_PIPE_31228.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\QA_JOB_Import_Quantity_PhaseCodenotexist.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\QA_JOB_Import_Quantity_Productnotexist.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\QA_JOB_Import_Quantity_WithoutPhaseCode.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_NoOptionsSpecified\QA_JOB_Import_Quantity_WithPhaseCode.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\JobStartWithOptionsSample_02.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\JobStartWithOptionsSample_03.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\JobStartWithOptionsSample_04.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\JobStartWithOptionsSample_05.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\JobStartWithOptionsSample_1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\QA_JOB_Import_Quantity_OptionsSpecified_PIPE_31228.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\QA_JOB_Import_Quantity_PhaseCodenotexist.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\QA_JOB_Import_Quantity_Productnotexist.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\QA_JOB_Import_Quantity_WithoutPhaseCode.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Jobs\JobQuantities_OptionsSpecified\QA_JOB_Import_Quantity_WithPhaseCode.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Purchasing\TradesImport\TradesToPhase\Pipeline_TradesToBuildingPhases.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Purchasing\TradesImport\TradesToScheduling\Pipeline_TradesToScheduling.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Purchasing\TradesImport\TradesToVendor\Pipeline_TradesToVendors.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\jfifFile.jfif" />
+    <Content Include="DataInputFiles\UploadImg\gif.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\UploadImg\jpeg.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\UploadImg\jpg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\UploadImg\png.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataInputFiles\Documents\DocumentTXT.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataInputFiles\Documents\DocumentXML.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="DataInputFiles\Resources\bmpFile.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\CommunityImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\gifFile.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\jpegFile.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\mpegFile.mpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\pngFile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataInputFiles\Resources\tifFile.tif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Script\TestData\Section III\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.MicrosoftDriver.17.17134.0\build\Selenium.WebDriver.MicrosoftDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.MicrosoftDriver.17.17134.0\build\Selenium.WebDriver.MicrosoftDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.5.0\build\net462\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit.4.1.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.4.1.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.126.0.6478.12600\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.126.0.6478.12600\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.MicrosoftDriver.17.17134.0\build\Selenium.WebDriver.MicrosoftDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.MicrosoftDriver.17.17134.0\build\Selenium.WebDriver.MicrosoftDriver.targets')" />
+  <Target Name="BeforeBuild">
+    <!-- Remove obj folder -->
+    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+    <!-- Remove bin folder -->
+    <RemoveDir Directories="$(BaseOutputPath)" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.GeckoDriver.0.30.0.1\build\Selenium.WebDriver.GeckoDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.IEDriver.4.0.0\build\Selenium.WebDriver.IEDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.126.0.6478.12600\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.126.0.6478.12600\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>

@@ -1,0 +1,2 @@
+Vendor Code,Vendor Name,Product Name,Product Description,Manufacturer Name,Style Name,Product Code,Material Cost,Labor Cost
+"41553","RT_QA_New_Vendor_41553","ProductDetail_AutomationTesting_DoNotDelete","Description for testing","Armstrong","carpet","5555","0","0"

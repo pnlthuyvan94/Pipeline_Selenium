@@ -1,0 +1,6 @@
+﻿Building Group Code,Building Group Name,Building Group Description,Building Phase Code,Building Phase Name,Building Phase  Abbreviated Name,Building Phase Description,Building Phase Type,Building Phase Parent,Tax Status
+18,Ppractice_Exterior_BuildGr,Building Group for Exterior,28,PL_BuildPhase_Garage_28,,,,,Non-tax
+18,Ppractice_Exterior_BuildGr,Building Group for Exterior,-120,Exact 4,,,,,Non-tax
+18,Ppractice_Exterior_BuildGr,Building Group for Exterior,-67,Less than 4,,,,,Non-tax
+18,Ppractice_Exterior_BuildGr,Building Group for Exterior,-12345,Over 4,,,,,Non-tax
+18,Ppractice_Exterior_BuildGr,Building Group for Exterior,30,PL_BuildPhase_Garage_30,,,,,Non-tax

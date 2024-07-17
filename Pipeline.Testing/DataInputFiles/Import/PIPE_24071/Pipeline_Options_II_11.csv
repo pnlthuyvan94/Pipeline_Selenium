@@ -1,0 +1,3 @@
+﻿Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","24072","RT_04","Option used for automation testing.","Option used for automation testing.","False","False","","","NONE","NONE"
+"M","24073","RT_04",,,"False","False","","","NONE","NONE"

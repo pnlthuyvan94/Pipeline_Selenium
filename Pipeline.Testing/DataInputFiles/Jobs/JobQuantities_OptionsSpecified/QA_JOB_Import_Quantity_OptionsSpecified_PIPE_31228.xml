@@ -1,0 +1,24 @@
+﻿<jobstartwithoptions xmlns="urn:Pipeline-JobStartWithOptions.xsd" version="1.0.2" source="BIM">
+	<jobcode>QA_RT_Job_PIPE_31128_Automation</jobcode>
+	<housecode>1228</housecode>
+	<housename>QA_RT_HouseJobBOM_PIPE_228_Automation</housename>
+	<communitycode/>
+	<communityname/>
+	<lotcode/>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="QA_RT_OPTION-CHILD1_AUTOMATION" description="">
+			<products>
+				<product name="QA_RT_Product19_JobBOM_Automation">
+					<product_code></product_code>
+					<product_description></product_description>
+					<product_qnt>60</product_qnt>
+					<product_use/>
+					<product_unit></product_unit>
+					<phase_code>BF04</phase_code>
+					<group_code/>
+				</product>
+			</products>
+		</option>
+	</options>
+</jobstartwithoptions>

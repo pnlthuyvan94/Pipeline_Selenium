@@ -1,0 +1,6 @@
+Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","Bid01","QA_RT_OptionBid01_Automation","","","False","False","","","",""
+"M","Bid02","QA_RT_OptionBid02_Automation","","","False","False","","","",""
+"M","Bid03","QA_RT_OptionBid03_Automation","","","False","False","","","",""
+"M","Bid04","QA_RT_OptionBid04_Automation","","","False","False","","","",""
+"M","Bid05","QA_RT_OptionBid05_Automation","","","False","False","","","",""

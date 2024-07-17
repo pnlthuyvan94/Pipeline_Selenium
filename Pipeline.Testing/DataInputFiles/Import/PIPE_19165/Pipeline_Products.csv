@@ -1,0 +1,9 @@
+Building Phase Code,Product Name,Category Name,Description,SKU,Notes,Manufacturer,Style,Code,Unit,Waste,Rounding Unit,Rounding Direction,Default Building Phase,Tax Status,Supplemental to Bid,Projected Cost,Reverse Product
+A_01,QA_RT_New_Product_PIPE_19165_01,,,,,CONCEPT,CONCEPT BASE,,LF,0,,STANDARD,,,FALSE,0,
+A_02,QA_RT_New_Product_PIPE_19165_02,,,,,CONCEPT,JACOBS-LADDER,,SF-2,0,,STANDARD,,,FALSE,0,
+A_02,QA_RT_New_Product_PIPE_19165_02,,,,,CONCEPT,Z-LINK,,SF-2,0,,STANDARD,,,FALSE,0,
+A_03,QA_RT_New_Product_PIPE_19165_03,,,,,GENERIC,GENERIC,,LF,0,,STANDARD,,,FALSE,0,
+A_04,QA_RT_New_Product_PIPE_19165_04,,,,,CONCEPT,PANHARD-BAR,,LF-2,0,,STANDARD,,,FALSE,0,
+A_03,QA_RT_New_Product_PIPE_19165_05,,,,,GENERIC,GENERIC,,LF,0,,STANDARD,,,FALSE,0,
+
+

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<as-builthouse version="1.0.2" xmlns="urn:Pipeline-AsBuiltHouse.xsd" source="Pipeline">
+	<housecode>7899</housecode>
+	<housename>QA_RT_House_47899_Automation</housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<configuration name="ELEVATION 1A, OPT. SIDE ENTRY GARAGE">
+		<options>
+			<option code="QA_RT_Option01_Automation" description="Please do not remove or modify"/>
+		</options>
+		<products>
+			<product name="QA_RT_New_Product_47899_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>1.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_47899_01">QA_RT_New_Style_47899_01</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+			</product>
+			<product name="QA_RT_New_Product_47899_02">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>2.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_47899_02">QA_RT_New_Style_47899_02</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+			</product>
+		</products>
+	</configuration>
+</as-builthouse>

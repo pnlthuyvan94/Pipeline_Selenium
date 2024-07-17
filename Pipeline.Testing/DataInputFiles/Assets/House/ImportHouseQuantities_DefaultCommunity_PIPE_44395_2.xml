@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>4395</housecode>
+	<housename>QA_RT_House_44395_Automation</housename>
+	<communitycode></communitycode>
+	<communityname>Default House Quantities</communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="QA_RT_Option_44395_Automation" description="Please do not remove or modify" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Style_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>123</phase_code>
+				<group_code>QA_RT_BuildingGroup1_Automation</group_code>
+			</product>
+		</products>
+	</option>
+</plusminus>

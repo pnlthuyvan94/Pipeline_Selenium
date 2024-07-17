@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode></housecode>
+	<housename>QA_RT_House_Automation</housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<series>"QA_RT_Serie_Automation"</series>
+	<option code="QA_RT_Option_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Prod_301">
+				<product_code></product_code>
+				<product_description>Product Description 301</product_description>
+				<product_qnt>1.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_Manufacturer_Automation">QA_RT_Style_Automation</style>
+				<phase_code>301</phase_code>
+				<group_code>"QA_RT_BuildingGroup_Automation"</group_code>
+				<parameters>
+					<parameter id="LEVEL" value="1ST_FLOOR"/>
+				</parameters>
+			</product>
+			<product name="QA_RT_New_Prod_302">
+				<product_code></product_code>
+				<product_description>Product Description 302</product_description>
+				<product_qnt>2.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_Manufacturer_Automation">QA_RT_Style_Automation</style>
+				<phase_code>302</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+				<parameters>
+					<parameter id="LEVEL" value="2ND_FLOOR"/>
+				</parameters>
+			</product>
+			<product name="QA_RT_New_Prod_303">
+				<product_code></product_code>
+				<product_description>Product Description 303</product_description>
+				<product_qnt>2.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_Manufacturer_Automation">QA_RT_Style_Automation</style>
+				<phase_code>303</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+				<parameters>
+					<parameter id="LEVEL" value="3ND_FLOOR"/>
+				</parameters>
+			</product>
+			<product name="QA_RT_New_Prod_304">
+				<product_code></product_code>
+				<product_description>Product Description 304_New</product_description>
+				<product_qnt>2.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_Manufacturer_Automation">QA_RT_Style_Automation</style>
+				<phase_code>304</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+				<parameters>
+					<parameter id="LEVEL" value="3ND_FLOOR"/>
+				</parameters>
+			</product>
+			<product name="QA_RT_New_Prod_305">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>2.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_Manufacturer_Automation">QA_RT_Style_Automation</style>
+				<phase_code>305</phase_code>
+				<group_code>QA_RT_BuildingGroup_Automation</group_code>
+				<parameters>
+					<parameter id="LEVEL" value="3ND_FLOOR"/>
+				</parameters>
+			</product>
+		</products>
+	</option>
+</plusminus>

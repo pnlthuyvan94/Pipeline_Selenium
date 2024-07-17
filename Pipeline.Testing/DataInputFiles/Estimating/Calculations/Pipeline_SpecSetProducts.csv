@@ -1,0 +1,2 @@
+Original Building Phase,Original Product Name,Original Product Style,Original Product Code,Original Product Description,Original Use,Spec Set Group,Spec Set,New Building Phase,New Product Name,New Product Style,New Product Code,New Product Description,New Use,Calculation
+"1162","QA_Product01","CONCEPT BASE","16_A","QA_Product1","ALL","SpecSetGroup_Automation_DoNotDelete","SpecSet_01","1163","QA_Product01","CONCEPT BASE","16_A","QA_Product1","UseA","RT_Calculation_Update_Detail_Page"

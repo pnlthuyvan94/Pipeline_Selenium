@@ -1,0 +1,5 @@
+﻿Plan Number,House Name,Community Code,Community Name,Option Name,Option Condition,Product Code,Product Name,Product Description,Product Quantity,Use,Product Unit,Building Phase Code,Parameter,Style Name,Manufacturer
+"4991","QA_RT_House_49912_Automation","","Default House Quantities","QA_RT_Option02_Automation","","","QA_Product_01_Automation","","60","","","QA_1","LEVEL=level01|SWG=swg01","",""
+"4991","QA_RT_House_49912_Automation","","Default House Quantities","QA_RT_Option02_Automation","","","QA_Product_01_Automation","","80","","","QA_1","LEVEL=level01|SWG=swg01|SWG=swg02","",""
+"4991","QA_RT_House_49912_Automation","","Default House Quantities","QA_RT_Option02_Automation","","","QA_Product_02_Automation","","70","","","QA_2","","",""
+

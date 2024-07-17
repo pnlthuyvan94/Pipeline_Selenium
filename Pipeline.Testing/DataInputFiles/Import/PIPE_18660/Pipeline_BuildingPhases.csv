@@ -1,0 +1,8 @@
+﻿Building Group Code,Building Group Name,Building Group Description,Building Phase Code,Building Phase Name,Building Phase  Abbreviated Name,Building Phase Description,Building Phase Type,Building Phase Parent,Tax Status
+"12111111","QA_RT_New_Building_Group_Auto_01","Automation testing","Au01","QA_RT_New_Building_Phase_01_Automation",,,,,
+"12111111","QA_RT_New_Building_Group_Auto_01","Automation testing","Au02","QA_RT_New_Building_Phase_02_Automation",,,,,
+"12111111","QA_RT_New_Building_Group_Auto_01","Automation testing","Au03","QA_RT_New_Building_Phase_03_Automation",,,,,
+"123","QA_RT_BuildingGroup1_Automation","Please do not remove or modify","123","QA_RT_BuildingPhase1_Automation",,,,,
+"123","QA_RT_BuildingGroup1_Automation","Please do not remove or modify","124","QA_RT_BuildingPhase2_Automation",,,,,
+"123","QA_RT_BuildingGroup1_Automation","Please do not remove or modify","125","QA_RT_BuildingPhase3_Automation",,,,,
+"123","QA_RT_BuildingGroup1_Automation","Please do not remove or modify","126","QA_RT_BuildingPhase4_Automation",,,,,

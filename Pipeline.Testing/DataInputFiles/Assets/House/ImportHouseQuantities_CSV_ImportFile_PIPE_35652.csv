@@ -1,0 +1,6 @@
+﻿Plan Number,House Name,Community Code,Community Name,Option Name,Option Condition,Product Code,Product Name,Product Description,Product Quantity,Use,Product Unit,Building Phase Code,Parameter,Style Name,Manufacturer
+"0001","QA_RT_House_Automation","","Default House Quantities","QA_RT_Option_Automation","","","QA_RT_New_Prod_301","","19","","","301","LEVEL=1ST_FLOOR","QA_RT_Style_Automation","QA_RT_Manufacturer_Automation"
+"0001","QA_RT_House_Automation","","Default House Quantities","QA_RT_Option_Automation","","","QA_RT_New_Prod_302","","18","","","302","LEVEL=2ND_FLOOR","QA_RT_Style_Automation","QA_RT_Manufacturer_Automation"
+"0001","QA_RT_House_Automation","","Default House Quantities","QA_RT_Option_Automation","","","QA_RT_New_Prod_303","","19","","","303","LEVEL=3ND_FLOOR","QA_RT_Style_Automation","QA_RT_Manufacturer_Automation"
+"0001","QA_RT_House_Automation","","Default House Quantities","QA_RT_Option_Automation","","","QA_RT_New_Prod_304","","19","","","304","","QA_RT_Style_Automation","QA_RT_Manufacturer_Automation"
+"0001","QA_RT_House_Automation","","Default House Quantities","QA_RT_Option_Automation","","","QA_RT_New_Prod_305","","19","","","305","","QA_RT_Style_Automation","QA_RT_Manufacturer_Automation"

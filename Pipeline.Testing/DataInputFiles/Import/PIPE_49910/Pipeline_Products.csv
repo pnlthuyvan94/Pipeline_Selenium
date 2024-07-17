@@ -1,0 +1,5 @@
+﻿Building Phase Code,Product Name,Category Name,Description,SKU,Notes,Manufacturer,Style,Code,Unit,Waste,Rounding Unit,Rounding Direction,Default Building Phase,Tax Status,Supplemental to Bid,Projected Cost,Reverse Product
+"Au_1","RT_QA_New_Product_Auto_01",,"","","","RT_QA_New_Manu_Auto","RT_QA_New_Style_Auto","","","0.00","","STANDARD","default","Phase","False","0.00",""
+"Au_1","RT_QA_New_Product_Auto_02",,"","","","RT_QA_New_Manu_Auto","RT_QA_New_Style_Auto","","","0.00","","STANDARD","default","Phase","False","0.00",""
+"Au_1","RT_QA_New_Product_Auto_03",,"","","","RT_QA_New_Manu_Auto","RT_QA_New_Style_Auto","","","0.00","","STANDARD","","Phase","False","0.00",""
+"Au_1","RT_QA_New_Product_Auto_04",,"","","","RT_QA_New_Manu_Auto","RT_QA_New_Style_Auto","","","0.00","","STANDARD","","Phase","False","0.00",""

@@ -1,0 +1,32 @@
+﻿namespace Pipeline.Common.Enums
+{
+    public enum ExportType
+    {
+        OptionGroups,
+        Options,
+        Manufacturers,
+        Communities,
+        Products,
+        ProductUses,
+        Categories,
+        BuildingGroups,
+        BOMPhaseRules,
+        SpecsetGroups,
+        SpecSetProducts,
+        ProductToCategory,
+        DefaultHouseQuantities,
+        SpecificCommunityHouseQuantities,
+        House_BOM,
+        Job_BOM,
+        TradesToBuildingPhases,
+        TradesToVendors,
+        TradesToSchedulingTasks,
+        BidCosts,
+        HistoricalBidCosts,
+        Community_HouseBOM,
+        Trades,
+        HouseEstimate,
+        JobEstimate,
+        Worksheets
+    }
+}

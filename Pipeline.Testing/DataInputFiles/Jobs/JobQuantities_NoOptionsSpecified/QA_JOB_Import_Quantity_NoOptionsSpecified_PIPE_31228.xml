@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jobstart version="1.0.2" source="Pipeline" xmlns="urn:Pipeline-JobStart.xsd">
+	<jobcode>QA_RT_Job_PIPE_31128_Automation</jobcode>
+	<housecode>1228</housecode>
+	<housename>QA_RT_HouseJobBOM_PIPE_228_Automation</housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<lotcode>1</lotcode>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="QA_RT_OPTION-PARENT_AUTOMATION" description="Regression Test Create Option" />
+	</options>
+	<customitems>
+		<products>
+			<product name="QA_RT_Product19_JobBOM_Automation">
+				<product_code/>
+				<product_description></product_description>
+				<product_qnt>40.0000</product_qnt>
+				<product_use/>
+				<product_unit/>
+				<phase_code>BF04</phase_code>
+				<group_code/>
+			</product>
+		</products>
+	</customitems>
+</jobstart>

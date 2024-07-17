@@ -1,0 +1,12 @@
+﻿Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","0100","QA_RT_Option01_Automation","","","False","False","","","",""
+"M","0200","QA_RT_Option02_Automation","","","False","False","","","",""
+"M","0300","QA_RT_Option03_Automation","","","False","False","","","",""
+"M","0400","QA_RT_Option04_Automation","","","False","False","","","",""
+"M","0500","QA_RT_Option05_Automation","","","False","False","","","",""
+"M","0600","QA_RT_Option06_Automation","","","False","False","","","",""
+"M","0700","QA_RT_Option07_Automation","","","False","False","","","",""
+"M","0800","QA_RT_Option08_Automation","","","False","False","","","",""
+"M","0900","QA_RT_Option09_Automation","","","False","False","","","",""
+"M","1000","QA_RT_Option10_Automation","","","False","False","","","",""
+"M","1100","QA_RT_Option11_Automation","","","False","False","","","",""

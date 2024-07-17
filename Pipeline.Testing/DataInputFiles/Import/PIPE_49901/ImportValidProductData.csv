@@ -1,0 +1,8 @@
+﻿Product Building Phase,Product Name,Product Style,Product Code,Product Description,BP Assignment Type,Subcomponent Building Phase,Subcomponent Product Name,Subcomponent Product Style,Subcomponent Product Code,Subcomponent Product Description,Multiplier,Calculation,Use,Swap Product,Option Number,Option Name,Disabled
+24,__PL_Product_1,,,,------,------,------,------,------,------,------,------,------,------,------,------,------
+24,__PL_Product_2,,,,------,------,------,------,------,------,------,------,------,------,------,------,------
+24,__PL_Product_3,,,,------,------,------,------,------,------,------,------,------,------,------,------,------
+24,__PL_Product_4,,,,------,------,------,------,------,------,------,------,------,------,------,------,------
+24,__PL_Product_4_Sub,,,,------,------,------,------,------,------,------,------,------,------,------,------,------
+All Building Phases,__PL_Product_1,,,,Static Building Phase,24,__PL_Product_4_Sub,,,,1,,NONE,No,NONE,NONE,No
+24,__PL_Product_1,,,,Static Building Phase,24,__PL_Product_4_Sub,,,,1,,NONE,No,NONE,NONE,No

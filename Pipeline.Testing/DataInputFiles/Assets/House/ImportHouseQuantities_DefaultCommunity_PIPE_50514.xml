@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>0514</housecode>
+	<housename>QA_RT_House_48407_Automation</housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="QA_RT_Option01_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option02_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option03_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option04_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option05_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option06_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option07_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option08_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option09_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+	<option code="QA_RT_Option10_Automation" description="" condition="">
+		<products>
+			<product name="QA_RT_New_Product_Automation_01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>10.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>Au01</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+</plusminus>

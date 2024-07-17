@@ -1,0 +1,5 @@
+﻿Building Group Code,Building Group Name,Building Group Description,Building Phase Code,Building Phase Name,Building Phase  Abbreviated Name,Building Phase Description,Building Phase Type,Building Phase Parent,Tax Status
+"_0001","QA_Building_Group_Automation","Automation testing","QA_1","QA_BuildingPhase_01_Automation",,,,,
+"_0001","QA_Building_Group_Automation","Automation testing","QA_2","QA_BuildingPhase_02_Automation",,,,,
+"_0001","QA_Building_Group_Automation","Automation testing","QA_3","QA_BuildingPhase_03_Automation",,,,,
+

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>6000</housecode>
+	<housename>QA_RT_House06_Automation</housename>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="QA_RT_Option01_Automation" condition="" description="">
+		<products>
+			<product name="QA_Product_01_Automation">
+				<product_code />
+				<product_description></product_description>
+				<product_qnt>100</product_qnt>
+				<product_unit></product_unit>
+				<phase_code>QA_2</phase_code>
+				<parameters>
+					<parameter value="3rd_Floor" id="LEVEL" />
+					<parameter value="R" id="SWG" />
+					<parameter value="ABC" id="GO" />
+					<parameter value="DEF" id="GO" />
+				</parameters>
+			</product>
+			<product name="QA_Product_01_Automation">
+				<product_code />
+				<product_description></product_description>
+				<product_qnt>500</product_qnt>
+				<product_unit></product_unit>
+				<phase_code></phase_code>
+				<parameters>
+					<parameter value="5th_Floor" id="LEVEL" />
+					<parameter value="L" id="SWG" />
+				</parameters>
+			</product>
+			<product name="QA_RT_Product1_Automation">
+				<product_code />
+				<product_description></product_description>
+				<product_qnt>500</product_qnt>
+				<product_unit></product_unit>
+				<phase_code></phase_code>
+				<parameters>
+					<parameter value="QQQ" id="LEVEL" />
+				</parameters>
+			</product>
+		</products>
+	</option>
+</plusminus>

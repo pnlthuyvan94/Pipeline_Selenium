@@ -1,0 +1,2 @@
+Bid Cost Id,Vendor Code,Vendor Name,Option Code,Option Name,Building Phase Code,Building Phase Name,Dependent Condition,Future Bid Cost,Future Bid Effective Date
+"796","RFHB","RT_QA_New_Vendor_FHB01","RFHB","RT_QA_New_Option_FHB01","RFHB","RT_QA_New_BuildingPhase_FHB01","","50.00","08/10/2023"

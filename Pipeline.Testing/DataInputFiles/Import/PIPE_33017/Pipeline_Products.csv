@@ -1,0 +1,12 @@
+﻿Building Phase Code,Product Name,Category Name,Description,SKU,Notes,Manufacturer,Style,Code,Unit,Waste,Rounding Unit,Rounding Direction,Default Building Phase,Tax Status,Supplemental to Bid,Projected Cost,Reverse Product
+"RT01","QA_RT_Product01_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","Unit_017","0.00","","STANDARD","default","Phase","False","0.00",""
+"RT01","QA_RT_Product02_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","default","Phase","False","0.00",""
+"RT01","QA_RT_Product03_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT02","QA_RT_Product04_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","Unit_017","0.00","","STANDARD","","Phase","False","0.00",""
+"RT03","QA_RT_Product05_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT03","QA_RT_Product06_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT03","QA_RT_Product07_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT04","QA_RT_Product08_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT04","QA_RT_Product09_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT04","QA_RT_Product10_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""
+"RT05","QA_RT_Product11_Auto",,"","","","QA_RT_Manufacturer_Automation","QA_RT_Style_Automation","","","0.00","","STANDARD","","Phase","False","0.00",""

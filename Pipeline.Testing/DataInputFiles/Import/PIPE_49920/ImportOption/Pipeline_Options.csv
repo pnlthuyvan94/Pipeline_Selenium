@@ -1,0 +1,5 @@
+﻿Level (M or G),Number,Name,Description,Sales Description,Elevation,Allow Multiples,Option Group,Option Room,Option Type,Cost Group
+"M","ORT","Option_QA_RT","","","False","False","","","",""
+"M","ORT1","Option_QA_RT1","","","False","False","","","",""
+"M","ORT2","Option_QA_RT2","","","False","False","","","",""
+"M","ORT5","Option_QA_RT5","","","False","False","","","",""

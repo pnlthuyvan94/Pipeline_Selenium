@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plusminus version="1.0.2" xmlns="urn:Pipeline-PlusMinus.xsd" source="Pipeline">
+	<housecode>400</housecode>
+	<housename>QA_RT_House04_Automation</housename>
+	<communitycode></communitycode>
+	<communityname>Default House Quantities</communityname>
+	<series>QA_RT_Serie3_Automation</series>
+	<option code="Option_QA_RT" description="" condition="">
+		<products>
+			<product name="QA_RT_Product07">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>7.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>9921</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+			<product name="QA_RT_Product08">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>8.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>9921</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+			<product name="QA_RT_Product09">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>9.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>9921</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+			<product name="QA_RT_Product01">
+				<product_code></product_code>
+				<product_description></product_description>
+				<product_qnt>1.0000</product_qnt>
+				<product_use></product_use>
+				<product_unit></product_unit>
+				<product_waste>0.00</product_waste>
+				<style manufacturer="QA_RT_New_Manu_Auto">QA_RT_New_Style_Auto</style>
+				<phase_code>9920</phase_code>
+				<group_code>QA_RT_New_Building_Group_Auto_01</group_code>
+			</product>
+		</products>
+	</option>
+</plusminus>

@@ -1,0 +1,4 @@
+Plan Number,House Name,Community Code,Community Name,Option Name,Option Condition,Product Name,Product Quantity,Use,Product Unit,Building Phase Code,Parameter,Style Name,Manufacturer
+"9165","QA_RT_House_PIPE_19165","QA_RT_Community_PIPE_19165_Code","QA_RT_Community_PIPE_19165","QA_RT_Option_PIPE_19165","","QA_RT_New_Product_PIPE_19165_01","-12.0000","QA_RT_USE_PIPE_19165","LF","A_01","","CONCEPT BASE","CONCEPT"
+"9165","QA_RT_House_PIPE_19165","QA_RT_Community_PIPE_19165_Code","QA_RT_Community_PIPE_19165","QA_RT_Option_PIPE_19165","","QA_RT_New_Product_PIPE_19165_02","-10.0000","QA_RT_USE_PIPE_19165","SF-2","A_02","","Z-LINK","CONCEPT"
+"9165","QA_RT_House_PIPE_19165","QA_RT_Community_PIPE_19165_Code","QA_RT_Community_PIPE_19165","QA_RT_Option_PIPE_19165","","QA_RT_New_Product_PIPE_19165_05","-14.0000","","LF","A_03","","GENERIC","GENERIC"

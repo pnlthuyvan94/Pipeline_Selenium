@@ -1,0 +1,4 @@
+CommunityName,CommunityCode,LotNumber,Status,CommunityPhase,Acre,Cost,Premium,Markup,Width,Depth,Address,City,State,Zip,Latitude,Longitude
+QA_RT_Community_PIPE_19165,QA_RT_Community_PIPE_19165_Code,QA_RT_Lot_PIPE_19165_01,,None,0,0.00,0.00,0.00,0,0,,,,,40.3862533569336,-86.8317947387695
+QA_RT_Community_PIPE_19165,QA_RT_Community_PIPE_19165_Code,QA_RT_Lot_PIPE_19165_02,,None,0,0.00,0.00,0.00,0,0,,,,,40.3862533569336,-86.8317947387695
+QA_RT_Community_PIPE_19165,QA_RT_Community_PIPE_19165_Code,QA_RT_Lot_PIPE_19165_03,,None,0,0.00,0.00,0.00,0,0,,,,,40.3862533569336,-86.8317947387695

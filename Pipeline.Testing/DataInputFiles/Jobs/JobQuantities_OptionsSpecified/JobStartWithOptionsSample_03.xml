@@ -1,0 +1,26 @@
+﻿<jobstartwithoptions xmlns="urn:Pipeline-JobStartWithOptions.xsd" version="1.0.2" source="Playbook">
+	<jobcode>RT-QA_JOB_Import_Quantity</jobcode>
+	<housecode></housecode>
+	<housename></housename>
+	<communitycode></communitycode>
+	<communityname></communityname>
+	<lotcode/>
+	<estimatetype>1</estimatetype>
+	<options>
+		<option code="Option_QA_RT1" description="">
+			<products>
+				<product name="QA_Product_01_Automation">
+					<product_code></product_code>
+					<product_sourceid>666789752689;9753472;977878;6666    </product_sourceid>
+					<product_description></product_description>
+					<product_qnt>200</product_qnt>
+					<product_use/>
+					<product_unit></product_unit>
+					<product_waste/>
+					<phase_code>QA_1</phase_code>
+					<group_code/>
+				</product>
+			</products>
+		</option>
+	</options>
+</jobstartwithoptions>
